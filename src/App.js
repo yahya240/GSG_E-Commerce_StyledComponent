@@ -6,8 +6,8 @@ import { lightTheme } from './global/themes';
 import GlobalStyle from './global/globalStyle';
 
 // pages
-import { Register,Login } from './pages';
-// import { Login } from './pages';
+import { Register, Login, Main, SingleProduct, Products, Cart, NotFound } from './pages';
+
 
 
 function App() {
@@ -15,11 +15,15 @@ function App() {
     <>
       <ThemeProvider theme={lightTheme}>
         <GlobalStyle />
-        {/* <h1>styled component project</h1>
-         */}
+        
         <Routes>
-          <Route path='/' element={<Login />} />
+          <Route path='/' element={<Main />} />
+          <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
+          <Route path='/products' element={<Products />} />
+          <Route path='/singleProduct' element={<SingleProduct />} />
+          <Route path='/cart' element={<Cart />} />
+          <Route path='/*' element={<NotFound />} />
         </Routes>
         
       </ThemeProvider>

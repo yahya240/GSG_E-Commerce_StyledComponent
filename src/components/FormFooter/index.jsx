@@ -43,7 +43,7 @@ const FormFooterContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 1rem 7%;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   background-color: ${props => props.theme.pallet.whiteColor};
 `

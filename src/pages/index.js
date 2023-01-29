@@ -1,2 +1,7 @@
+export {default as SingleProduct} from './SingleProduct'
+export {default as Products} from './Products'
+export {default as Cart} from './Cart'
 export {default as Register} from './Register'
 export {default as Login} from './Login'
+export {default as Main} from './Main'
+export {default as NotFound} from './NotFound'

@@ -8,7 +8,7 @@ import {
 
 const Register = () => {
   
-  const [formData,setFormData] = useState({username:'',password:'',password2:'',terms:false});
+  const [formData,setFormData] = useState({name:'',surname:'',email:'',password:'',password2:'',terms:false});
 
   const handleChange = (e)=>{
       const name = e.target.name;
