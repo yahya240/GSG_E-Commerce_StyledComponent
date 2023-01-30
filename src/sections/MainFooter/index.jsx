@@ -60,10 +60,10 @@ const MainFooter = () => {
                   <ContentDetailItem>
                     <ContentDetailItemHeader>Information</ContentDetailItemHeader>
                     <ContentDetailItemContent>
-                      <ContentDetailSingleItem>About Us</ContentDetailSingleItem>
-                      <ContentDetailSingleItem>Find store</ContentDetailSingleItem>
-                      <ContentDetailSingleItem>Categories</ContentDetailSingleItem>
-                      <ContentDetailSingleItem>Blogs</ContentDetailSingleItem>
+                      <ContentDetailSingleItem>Help Center</ContentDetailSingleItem>
+                      <ContentDetailSingleItem>Money Refund</ContentDetailSingleItem>
+                      <ContentDetailSingleItem>Shipping</ContentDetailSingleItem>
+                      <ContentDetailSingleItem>Contact us</ContentDetailSingleItem>
                     </ContentDetailItemContent>
                   </ContentDetailItem>
                 </FooterContentDetails>
@@ -72,10 +72,10 @@ const MainFooter = () => {
                   <ContentDetailItem>
                     <ContentDetailItemHeader>For users</ContentDetailItemHeader>
                     <ContentDetailItemContent>
-                      <ContentDetailSingleItem>About Us</ContentDetailSingleItem>
-                      <ContentDetailSingleItem>Find store</ContentDetailSingleItem>
-                      <ContentDetailSingleItem>Categories</ContentDetailSingleItem>
-                      <ContentDetailSingleItem>Blogs</ContentDetailSingleItem>
+                      <ContentDetailSingleItem>Login</ContentDetailSingleItem>
+                      <ContentDetailSingleItem>Register</ContentDetailSingleItem>
+                      <ContentDetailSingleItem>Settings</ContentDetailSingleItem>
+                      <ContentDetailSingleItem>My Orders</ContentDetailSingleItem>
                     </ContentDetailItemContent>
                   </ContentDetailItem>
                 </FooterContentDetails>
@@ -143,7 +143,7 @@ const ContentDetailSingleItem = styled.div`
 
   /* gray-500 */
 
-  color: #8B96A5;
+  color: ${({theme}) => theme.pallet.greyColor4};
 `
 const ContentDetailItemContent = styled.div`
   margin-top: 10px;
@@ -152,12 +152,8 @@ const ContentDetailItemHeader = styled.h3`
   font-weight:600;
   font-size: 16px;
   line-height: 22px;
-  /* identical to box height, or 138% */
 
-
-  /* dark */
-
-  color: #1C1C1C;
+  color: ${({theme}) => theme.pallet.blackColor};
 `
 const ContentDetailItem = styled.div`
   
@@ -180,7 +176,7 @@ const CompanyInfoText = styled.h4`
   letter-spacing: -0.2px;
 
   padding: 1rem 0;
-  color: #505050;
+  color: ${({theme}) => theme.pallet.greyColor6};
 `
 const CompanyInfo = styled.div`
   

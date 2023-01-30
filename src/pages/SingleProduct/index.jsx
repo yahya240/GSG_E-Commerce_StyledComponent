@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { MainHeader, MainNavbar, MainFooter } from '../../sections'
+import { MainHeader, MainNavbar, MainFooter, DiscountBar } from '../../sections'
 
 
 const SingleProduct = () => {
@@ -13,6 +13,7 @@ const SingleProduct = () => {
       <JustSpace>
         SingleProductPage
       </JustSpace>
+      <DiscountBar />
       <MainFooter />
 
     </SingleProductPage>

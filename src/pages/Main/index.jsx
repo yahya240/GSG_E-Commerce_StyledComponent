@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { MainHeader, MainNavbar, MainFooter } from '../../sections'
+import { MainHeader, MainNavbar, MainFooter, Subscribe } from '../../sections'
 // import { Container, Logo } from '../../components'
 
 // import usFlagIcon from '../../assets/images/us-flag.png'
@@ -21,6 +21,7 @@ const Main = () => {
       <MainNavbar />
       {/* just space to see footer */}
       <JustSpace />
+      <Subscribe />
       <MainFooter />
 
     </MainPage>

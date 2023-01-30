@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { MainHeader, MainNavbar, MainFooter } from '../../sections'
+import { MainHeader, MainNavbar, MainFooter, Subscribe } from '../../sections'
 
 const Products = () => {
   return (
@@ -12,6 +12,7 @@ const Products = () => {
       <JustSpace>
         ProductsPage
       </JustSpace>
+      <Subscribe />
       <MainFooter />
 
     </ProductsPage>
