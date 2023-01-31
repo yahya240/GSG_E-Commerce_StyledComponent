@@ -1,18 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { MainHeader, MainNavbar, MainFooter, DiscountBar } from '../../sections'
+import { MainHeader, MainFooter, DiscountBar, CartPayment } from '../../sections'
+import { Container } from '../../components'
 
 
 const Cart = () => {
   return (
     <CartPage>
       <MainHeader />
-      <MainNavbar />
-      {/* just space to see footer */}
-      <JustSpace>
-        CartPage
-      </JustSpace>
+      <Container>
+        <CartHeader>My cart (3)</CartHeader>
+        <CartPayment />
+      </Container>
       <DiscountBar />
       <MainFooter />
 
@@ -29,9 +29,8 @@ const CartPage = styled.div`
 `
 
 // just space to see footer
-const JustSpace = styled.div`
-  max-width: 100vw;
-  min-height: 30vh;
+const CartHeader = styled.h2`
+  margin-top: 27px;
 `
 
 
