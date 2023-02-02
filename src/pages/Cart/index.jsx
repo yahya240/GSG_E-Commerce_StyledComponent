@@ -1,8 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { MainHeader, MainFooter, DiscountBar, CartPayment } from '../../sections'
+import { MainHeader, MainFooter, DiscountBar, CartPayment, CartPamentFeatures, CartSavedForLater } from '../../sections'
 import { Container } from '../../components'
+
+
 
 
 const Cart = () => {
@@ -12,6 +14,8 @@ const Cart = () => {
       <Container>
         <CartHeader>My cart (3)</CartHeader>
         <CartPayment />
+        <CartPamentFeatures />
+        <CartSavedForLater />
       </Container>
       <DiscountBar />
       <MainFooter />

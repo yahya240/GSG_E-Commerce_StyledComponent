@@ -1,18 +1,21 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { MainHeader, MainNavbar, MainFooter, DiscountBar } from '../../sections'
-
+import { MainHeader, MainNavbar, MainFooter, DiscountBar, RelatedProducts } from '../../sections'
+import { Container } from '../../components'
 
 const SingleProduct = () => {
   return (
     <SingleProductPage>
       <MainHeader />
       <MainNavbar />
-      {/* just space to see footer */}
-      <JustSpace>
-        SingleProductPage
-      </JustSpace>
+      <Container>
+        {/* just space to see footer */}
+        <JustSpace>
+          SingleProductPage
+        </JustSpace>
+        <RelatedProducts />
+      </Container>
       <DiscountBar />
       <MainFooter />
 

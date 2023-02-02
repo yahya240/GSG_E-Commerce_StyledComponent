@@ -10,6 +10,7 @@ const ProductImage = ({image,height,width,bgColor}) => {
 }
 
 const CartPaymentItemDetailsImage = styled.img`
+  height: 70%;
     
 `
 const CartPaymentItemDetailsImageContainer = styled.div`

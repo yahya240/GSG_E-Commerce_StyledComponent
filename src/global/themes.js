@@ -28,6 +28,8 @@ export const lightTheme = {
     greyColor4: '#8B96A5',
     greyColor5: '#EFF2F4;',
     greyColor6: '#505050;',
+    greyColor7: '#E4E4E4;',
+    greyColor8: '#EEEEEE;',
     blueColor: '#0D6EFD',
     blueColor2: '#4267B2',
     blueColor3: '#127FFF',
@@ -35,6 +37,8 @@ export const lightTheme = {
     blueColor5: '#237CFF',
     blueColor6: '#005ADE;',
     orangeColor: '#FF9017;',
+    greenColor: '#00B517;',
+    redColor: '#FA3434;',
   },
   fontSizes,
 };

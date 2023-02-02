@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { Link } from 'react-router-dom'
+
 import profileIcon from '../../assets/images/profile.png'
 import messageIcon from '../../assets/images/message.png'
 import orderIcon from '../../assets/images/order.png'
@@ -43,7 +45,7 @@ const MainHeader = () => {
               </HeaderIconsDiv>
               <HeaderIconsDiv>
                 <HeaderIconImage src={cartIcon} />
-                <HeaderIconTitle>My cart</HeaderIconTitle>
+                <HeaderIconTitle><Link to='/cart'>My cart</Link></HeaderIconTitle>
               </HeaderIconsDiv>
 
             </MainHeaderIcons>

@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { Link } from 'react-router-dom'
+
 import { Container, Logo } from '../../components'
 
 import usFlagIcon from '../../assets/images/us-flag.png'
@@ -72,10 +74,10 @@ const MainFooter = () => {
                   <ContentDetailItem>
                     <ContentDetailItemHeader>For users</ContentDetailItemHeader>
                     <ContentDetailItemContent>
-                      <ContentDetailSingleItem>Login</ContentDetailSingleItem>
-                      <ContentDetailSingleItem>Register</ContentDetailSingleItem>
-                      <ContentDetailSingleItem>Settings</ContentDetailSingleItem>
-                      <ContentDetailSingleItem>My Orders</ContentDetailSingleItem>
+                      <Link to='/login'><ContentDetailSingleItem>Login</ContentDetailSingleItem></Link>
+                      <Link to='/register'><ContentDetailSingleItem>Register</ContentDetailSingleItem></Link>
+                      <Link to='/products'><ContentDetailSingleItem>Settings</ContentDetailSingleItem></Link>
+                      <Link to='/singleProduct'><ContentDetailSingleItem>My Orders</ContentDetailSingleItem></Link>
                     </ContentDetailItemContent>
                   </ContentDetailItem>
                 </FooterContentDetails>
@@ -147,6 +149,10 @@ const ContentDetailSingleItem = styled.div`
 `
 const ContentDetailItemContent = styled.div`
   margin-top: 10px;
+
+  a{
+    text-decoration: none;
+  }
 `
 const ContentDetailItemHeader = styled.h3`
   font-weight:600;

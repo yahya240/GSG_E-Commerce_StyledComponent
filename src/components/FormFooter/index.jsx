@@ -5,14 +5,16 @@ import visaIcon from '../../assets/images/visa.png'
 import expressIcon from '../../assets/images/express.png'
 import amercanIcon from '../../assets/images/amercan.png'
 
+import { CreditCardImage } from '../'
+
 const FormFooter = () => {
   return (
     <FormFooterContainer>
       <CreditCards>
-        <CreditCardImage src={paymentIcon}/>
-        <CreditCardImage src={visaIcon}/>
-        <CreditCardImage src={expressIcon}/>
-        <CreditCardImage src={amercanIcon}/>
+        <CreditCardImage image={paymentIcon}/>
+        <CreditCardImage image={visaIcon}/>
+        <CreditCardImage image={expressIcon}/>
+        <CreditCardImage image={amercanIcon}/>
       </CreditCards>
       <SupportLinks>
         <SupportLink>Support</SupportLink>
@@ -26,9 +28,7 @@ const FormFooter = () => {
 const CreditCards = styled.div`
 
 `
-const CreditCardImage = styled.img`
-  padding: 0 5px;
-`
+
 const SupportLinks = styled.div`
   display: flex;
   gap: 30px;
