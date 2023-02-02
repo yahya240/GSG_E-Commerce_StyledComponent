@@ -23,7 +23,7 @@ const Subscribe = () => {
 
 const SubscribeContentEmailIcon = styled.img`
     position: absolute;
-    left: 4.4rem;
+    left: 1.2rem;
     top: 10px;
 `
 const SubscribeContentEmailButton = styled.button`
@@ -37,7 +37,8 @@ const SubscribeContentEmailButton = styled.button`
     cursor: pointer;
 `
 const SubscribeContentEmailInput = styled.input`
-    width: 274px;
+    /* width: 274px; */
+    width: 100%;
     height: 40px;
     background: ${({theme}) => theme.pallet.whiteColor};
     border: 1px solid ${({theme}) => theme.pallet.whiteColor2};
@@ -55,6 +56,8 @@ const SubscribeContentEmailInput = styled.input`
     }
 `
 const SubscribeContentEmail = styled.div`
+    width: 100%;
+    display: flex;
     position: relative;
     margin-top: 21px;
 `
