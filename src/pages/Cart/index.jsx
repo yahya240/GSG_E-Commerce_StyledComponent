@@ -5,8 +5,6 @@ import { MainHeader, MainFooter, DiscountBar, CartPayment, CartPamentFeatures, C
 import { Container } from '../../components'
 
 
-
-
 const Cart = () => {
   return (
     <CartPage>
@@ -32,7 +30,6 @@ const CartPage = styled.div`
   background-color: ${({theme}) => theme.pallet.greyColor3};
 `
 
-// just space to see footer
 const CartHeader = styled.h2`
   margin-top: 27px;
 `

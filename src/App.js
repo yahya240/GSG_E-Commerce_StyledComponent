@@ -5,9 +5,12 @@ import {Routes, Route} from 'react-router-dom';
 import { lightTheme } from './global/themes';
 import GlobalStyle from './global/globalStyle';
 
+// routes 
+import MainRoutes from './routes';
+
 // pages
-import { Register, Login, Main, SingleProduct, Products, Cart } from './pages';
-import NotFound from './Errors/NotFound'
+// import { Register, Login, Main, SingleProduct, Products, Cart } from './pages';
+// import NotFound from './Errors/NotFound'
 
 
 function App() {
@@ -15,17 +18,9 @@ function App() {
     <>
       <ThemeProvider theme={lightTheme}>
         <GlobalStyle />
-        
         <Routes>
-          <Route path='/' element={<Main />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/register' element={<Register />} />
-          <Route path='/products' element={<Products />} />
-          <Route path='/singleProduct' element={<SingleProduct />} />
-          <Route path='/cart' element={<Cart />} />
-          <Route path='/*' element={<NotFound />} />
+          <Route path="/*" element={<MainRoutes />} />
         </Routes>
-        
       </ThemeProvider>
     </>
   );
