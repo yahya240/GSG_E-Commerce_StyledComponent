@@ -22,6 +22,7 @@ export const lightTheme = {
     blackColor: '#1C1C1C', //      ${({theme}) => theme.pallet.blackColor};
     blackColor2: '#606060', //      ${({theme}) => theme.pallet.blackColor2};
     blackColor3: '#000000',  //      ${({theme}) => theme.pallet.blackColor3};
+    blackColor4: '#314051',  //      ${({theme}) => theme.pallet.blackColor4};
     greyColor: '#A9ACB0', //      ${({theme}) => theme.pallet.greyColor};
     greyColor2: '#E0E0E0', //      ${({theme}) => theme.pallet.greyColor2};
     greyColor3: '#F7FAFC', //      ${({theme}) => theme.pallet.greyColor3};
