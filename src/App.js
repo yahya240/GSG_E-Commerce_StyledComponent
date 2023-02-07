@@ -6,8 +6,8 @@ import { lightTheme } from './global/themes';
 import GlobalStyle from './global/globalStyle';
 
 // pages
-import { Register, Login, Main, SingleProduct, Products, Cart, NotFound } from './pages';
-
+import { Register, Login, Main, SingleProduct, Products, Cart } from './pages';
+import NotFound from './Errors/NotFound'
 
 
 function App() {
