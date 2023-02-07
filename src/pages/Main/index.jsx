@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { MainHeader, MainNavbar, MainFooter, Subscribe } from '../../sections'
-// import { Container, Logo } from '../../components'
+import { MainHeader, MainNavbar, MainFooter, Subscribe, MainHero, RecommendedItems, SupliersRequests, 
+  MainDealsAndOffers, MainHomeOutDoor, ElectronicsAndGadgets, SuppliersByRegion, ExtraServices } from '../../sections'
+import { Container } from '../../components'
 
 // import usFlagIcon from '../../assets/images/us-flag.png'
 // import dropUpIcon from '../../assets/images/Vector3.png'
@@ -19,8 +20,16 @@ const Main = () => {
     <MainPage>
       <MainHeader />
       <MainNavbar />
-      {/* just space to see footer */}
-      <JustSpace />
+      <Container>
+        <MainHero />
+        <MainDealsAndOffers />
+        <MainHomeOutDoor />
+        <ElectronicsAndGadgets />
+        <SupliersRequests />
+        <RecommendedItems />
+        <ExtraServices />
+        <SuppliersByRegion />
+      </Container>
       <Subscribe />
       <MainFooter />
 
@@ -37,10 +46,5 @@ const MainPage = styled.div`
   background-color: ${({theme}) => theme.pallet.greyColor3};
 `
 
-// just space to see footer
-const JustSpace = styled.div`
-  max-width: 100vw;
-  min-height: 30vh;
-`
 
 export default Main

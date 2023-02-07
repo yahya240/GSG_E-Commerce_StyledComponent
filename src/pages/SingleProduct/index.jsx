@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { MainHeader, MainNavbar, MainFooter, DiscountBar, RelatedProducts } from '../../sections'
+import { MainHeader, MainNavbar, MainFooter, DiscountBar, RelatedProducts, ProductsPath, SingleProductItem, SingleProductDetails } from '../../sections'
 import { Container } from '../../components'
 
 const SingleProduct = () => {
@@ -10,10 +10,9 @@ const SingleProduct = () => {
       <MainHeader />
       <MainNavbar />
       <Container>
-        {/* just space to see footer */}
-        <JustSpace>
-          SingleProductPage
-        </JustSpace>
+        <ProductsPath />
+        <SingleProductItem />
+        <SingleProductDetails />
         <RelatedProducts />
       </Container>
       <DiscountBar />
@@ -28,12 +27,6 @@ const SingleProductPage = styled.div`
   max-width: 100vw;
   min-height: 100vh;
   background-color: ${({theme}) => theme.pallet.greyColor3};
-`
-
-// just space to see footer
-const JustSpace = styled.div`
-  max-width: 100vw;
-  min-height: 30vh;
 `
 
 

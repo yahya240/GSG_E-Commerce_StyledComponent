@@ -1,20 +1,21 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { MainHeader, MainNavbar, MainFooter, Subscribe } from '../../sections'
+import { MainHeader, MainNavbar, MainFooter, Subscribe, ProductsPath, ProductsSection } from '../../sections'
+
+import { Container } from '../../components'
 
 const Products = () => {
   return (
     <ProductsPage>
       <MainHeader />
       <MainNavbar />
-      {/* just space to see footer */}
-      <JustSpace>
-        ProductsPage
-      </JustSpace>
+      <Container>
+        <ProductsPath />
+        <ProductsSection />
+      </Container>
       <Subscribe />
       <MainFooter />
-
     </ProductsPage>
   )
 }
@@ -27,10 +28,5 @@ const ProductsPage = styled.div`
   background-color: ${({theme}) => theme.pallet.greyColor3};
 `
 
-// just space to see footer
-const JustSpace = styled.div`
-  max-width: 100vw;
-  min-height: 30vh;
-`
 
 export default Products

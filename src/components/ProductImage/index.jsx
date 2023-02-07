@@ -1,16 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const ProductImage = ({image,height,width,bgColor}) => {
+const ProductImage = ({image,height,width,bgColor,imgSize}) => {
   return (
-    <CartPaymentItemDetailsImageContainer width={width} height={height} bgColor={bgColor}>
-        <CartPaymentItemDetailsImage src={image} />
+    <CartPaymentItemDetailsImageContainer  width={width} height={height} bgColor={bgColor}>
+        <CartPaymentItemDetailsImage imgSize={imgSize} src={image} />
     </CartPaymentItemDetailsImageContainer>
   )
 }
 
 const CartPaymentItemDetailsImage = styled.img`
-  height: 70%;
+  height: ${(props)=> props.imgSize? props.imgSize : '70%'};
+  mix-blend-mode: multiply;
+  filter: contrast(1);
     
 `
 const CartPaymentItemDetailsImageContainer = styled.div`
@@ -22,7 +24,7 @@ const CartPaymentItemDetailsImageContainer = styled.div`
     
     background: ${(props)=> props.bgColor};
 
-    border: 1px solid #E0E0E0;
+    border: 1px solid ${(props)=> props.bgColor};
     border-radius: 6px;
 `
 

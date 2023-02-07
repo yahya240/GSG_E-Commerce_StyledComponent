@@ -56,7 +56,8 @@ const SubscribeContentEmailInput = styled.input`
     }
 `
 const SubscribeContentEmail = styled.div`
-    width: 100%;
+    width: 85%;
+    margin: 0 auto;
     display: flex;
     position: relative;
     margin-top: 21px;
