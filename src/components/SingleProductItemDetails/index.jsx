@@ -151,7 +151,7 @@ line-height: 22px;
 
 /* base-color/dark */
 
-color: ${(props)=> props.target?  '#FA3434': '#1C1C1C'};
+color: ${(props)=> props.target?  '#FA3434': props.theme.pallet.blackColor};
 `
 const SingleProductItemProductDetailsPrice = styled.div`
 border-left: ${(props)=> props.target === 'true'? '' : '1px solid #BDC1C8'};
@@ -219,7 +219,7 @@ font-weight: 600;
 font-size: 20px;
 max-width: 384px;
 
-color: #1C1C1C;
+color: ${({theme}) => theme.pallet.blackColor};
 margin-top: 5px;
 `
 const SingleProductItemProductDetailsInStockText = styled.h4`

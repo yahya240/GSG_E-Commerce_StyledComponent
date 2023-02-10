@@ -40,7 +40,7 @@ const MainDealsAndOffers = () => {
             <MainDealsAndOffersRight>
                 <MainDealsAndOffersRightItem>
                     <MainDealsAndOffersRightItemImage>
-                        <ProductImage image={watchImage} imgSize={'90%'} width={'140'} height={'140'} bgColor={' #FFFFFF'} />
+                        <ProductImage image={watchImage} imgSize={'90%'} width={'140'} height={'140'} bgColor={({theme}) => theme.pallet.whiteColor} />
                     </MainDealsAndOffersRightItemImage>
                     <MainDealsAndOffersRightItemName>Smart watches</MainDealsAndOffersRightItemName>
                     <MainDealsAndOffersRightItemPrice>
@@ -49,7 +49,7 @@ const MainDealsAndOffers = () => {
                 </MainDealsAndOffersRightItem>
                 <MainDealsAndOffersRightItem>
                     <MainDealsAndOffersRightItemImage>
-                        <ProductImage image={watchImage2} imgSize={'80%'} width={'140'} height={'140'} bgColor={' #FFFFFF'} />
+                        <ProductImage image={watchImage2} imgSize={'80%'} width={'140'} height={'140'} bgColor={({theme}) => theme.pallet.whiteColor} />
                     </MainDealsAndOffersRightItemImage>
                     <MainDealsAndOffersRightItemName>Laptops</MainDealsAndOffersRightItemName>
                     <MainDealsAndOffersRightItemPrice>
@@ -58,7 +58,7 @@ const MainDealsAndOffers = () => {
                 </MainDealsAndOffersRightItem>
                 <MainDealsAndOffersRightItem>
                     <MainDealsAndOffersRightItemImage>
-                        <ProductImage image={watchImage3}  width={'140'} height={'140'} bgColor={' #FFFFFF'} />
+                        <ProductImage image={watchImage3}  width={'140'} height={'140'} bgColor={({theme}) => theme.pallet.whiteColor} />
                     </MainDealsAndOffersRightItemImage>
                     <MainDealsAndOffersRightItemName>GoPro cameras</MainDealsAndOffersRightItemName>
                     <MainDealsAndOffersRightItemPrice>
@@ -67,7 +67,7 @@ const MainDealsAndOffers = () => {
                 </MainDealsAndOffersRightItem>
                 <MainDealsAndOffersRightItem>
                     <MainDealsAndOffersRightItemImage>
-                        <ProductImage image={watchImage4} imgSize={'90%'} width={'140'} height={'140'} bgColor={' #FFFFFF'} />
+                        <ProductImage image={watchImage4} imgSize={'90%'} width={'140'} height={'140'} bgColor={({theme}) => theme.pallet.whiteColor} />
                     </MainDealsAndOffersRightItemImage>
                     <MainDealsAndOffersRightItemName>Headphones</MainDealsAndOffersRightItemName>
                     <MainDealsAndOffersRightItemPrice>
@@ -76,7 +76,7 @@ const MainDealsAndOffers = () => {
                 </MainDealsAndOffersRightItem>
                 <MainDealsAndOffersRightItem>
                     <MainDealsAndOffersRightItemImage>
-                        <ProductImage image={watchImage5} imgSize={'90%'} width={'140'} height={'140'} bgColor={' #FFFFFF'} />
+                        <ProductImage image={watchImage5} imgSize={'90%'} width={'140'} height={'140'} bgColor={({theme}) => theme.pallet.whiteColor} />
                     </MainDealsAndOffersRightItemImage> 
                     <MainDealsAndOffersRightItemName>Canon camreras</MainDealsAndOffersRightItemName>
                     <MainDealsAndOffersRightItemPrice>
@@ -123,7 +123,7 @@ letter-spacing: -0.2px;
 
 /* dark */
 
-color: #1C1C1C;
+color: ${({theme}) => theme.pallet.blackColor};
 `
 
 const MainDealsAndOffersRightItemImage = styled.div`
@@ -150,7 +150,7 @@ const MainDealsAndOffersLeftDateItemPeriod = styled.div`
 
     text-align: center;
 
-    color: #FFFFFF;
+    color: ${({theme}) => theme.pallet.whiteColor};
 `
 const MainDealsAndOffersLeftDateItemNumber = styled.div`
     font-weight: 700;
@@ -158,13 +158,13 @@ font-size: 16px;
 line-height: 19px;
 text-align: center;
 
-color: #FFFFFF;
+color: ${({theme}) => theme.pallet.whiteColor};
 `
 const MainDealsAndOffersLeftDateItem = styled.div`
     width: 45px;
     height: 50px;
 
-    background: #606060;
+    background: ${({theme}) => theme.pallet.blackColor2};
     border-radius: 4px;
     
 
@@ -187,7 +187,7 @@ line-height: 19px;
 
 /* gray-500 */
 
-color: #8B96A5;
+color: ${({theme}) => theme.pallet.greyColor4};
 `
 const MainDealsAndOffersLeftHeader = styled.div`
     font-weight: 600;
@@ -199,7 +199,7 @@ letter-spacing: -0.2px;
 
 /* base-color/dark */
 
-color: #1C1C1C;
+color: ${({theme}) => theme.pallet.blackColor};
 `
 const MainDealsAndOffersRight = styled.div`
     display: flex;
@@ -220,7 +220,7 @@ const MainDealsAndOffersSection = styled.div`
     width: 100%;
     height: 240px;
 
-    background: #FFFFFF;
+    background: ${({theme}) => theme.pallet.whiteColor};
 
     border: 1px solid #E3E8EE;
     border-radius: 6px;

@@ -1,16 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 
 import {SingleProductFeature} from '../'
 
 const SingleProductDetailsInfo = () => {
+    const [tap,setTap] = useState('Description');
   return (
     <SingleProductDetailsInfoDiv>
             <SingleProductDetailsInfoHeader>
-                <SingleProductDetailsInfoHeaderItem>Description</SingleProductDetailsInfoHeaderItem>
-                <SingleProductDetailsInfoHeaderItem>Reviews</SingleProductDetailsInfoHeaderItem>
-                <SingleProductDetailsInfoHeaderItem>Shipping</SingleProductDetailsInfoHeaderItem>
-                <SingleProductDetailsInfoHeaderItem>About company</SingleProductDetailsInfoHeaderItem>
+                <SingleProductDetailsInfoHeaderItem type={tap === 'Description'? 'active' : ''} onClick={()=>setTap('Description')}>Description</SingleProductDetailsInfoHeaderItem>
+                <SingleProductDetailsInfoHeaderItem type={tap === 'Reviews'? 'active' : ''} onClick={()=>setTap('Reviews')}>Reviews</SingleProductDetailsInfoHeaderItem>
+                <SingleProductDetailsInfoHeaderItem type={tap === 'Shipping'? 'active' : ''} onClick={()=>setTap('Shipping')}>Shipping</SingleProductDetailsInfoHeaderItem>
+                <SingleProductDetailsInfoHeaderItem type={tap === 'About company'? 'active' : ''} onClick={()=>setTap('About company')}>About company</SingleProductDetailsInfoHeaderItem>
             </SingleProductDetailsInfoHeader>
             
             <SingleProductDetailsInformationDiv>
@@ -97,7 +98,7 @@ line-height: 24px;
 
 padding-left: 10px;
 
-color: #505050;
+color: ${({theme}) => theme.pallet.greyColor6};
 `
 const SingleProductDetailsInfoTableItemValue = styled.div`
     display: flex;
@@ -111,14 +112,14 @@ line-height: 19px;
 
 padding-left: 10px;
 
-color: #505050;
+color: ${({theme}) => theme.pallet.greyColor6};
 `
 
 const SingleProductDetailsInfoTableItemName = styled.div`
     display: flex;
     align-items: center;
     height: 100%;
-    background: #EFF2F4;
+    background: ${({theme}) => theme.pallet.greyColor5}
 `
 
 const SingleProductDetailsInfoTableItem = styled.div`
@@ -140,7 +141,7 @@ const SingleProductDetailsInformation = styled.p`
     font-size: 16px;
     line-height: 24px;
 
-    color: #505050;
+    color: ${({theme}) => theme.pallet.greyColor6};
 `
 
 const SingleProductDetailsInformationDiv = styled.div`
@@ -156,8 +157,21 @@ const SingleProductDetailsInfoHeaderItem = styled.h4`
     text-align: center;
 
     padding:    16px 16px 13px;
-    color: #8B96A5;
-    /* color: #0D6EFD; */
+    color: ${(props) => props.type === 'active'? props.theme.pallet.blueColor : props.theme.pallet.greyColor4};
+    cursor: pointer;
+
+    position: relative;
+
+    &::after{
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        background-color: ${(props) => props.type === 'active'? props.theme.pallet.blueColor : 'none'};
+        bottom: 0;
+        left: 0;
+    } 
+    
 `
 
 const SingleProductDetailsInfoHeader = styled.div`
@@ -166,7 +180,7 @@ const SingleProductDetailsInfoHeader = styled.div`
 `
 
 const SingleProductDetailsInfoDiv = styled.div`
-    background: #FFFFFF;
+    background: ${({theme}) => theme.pallet.whiteColor};
 
     border: 1px solid #E3E8EE;
 

@@ -91,7 +91,7 @@ line-height: 22px;
 margin: 16px 20px 20px;
 max-width: 140px;
 
-color: #1C1C1C;
+color: ${({theme}) => theme.pallet.blackColor};
 `
 
 const ExtraServicesCardImageDiv = styled.div`
@@ -103,7 +103,7 @@ const ExtraServicesCardImageDiv = styled.div`
 `
 
 const ExtraServicesCard = styled.div`
-  background: #FFFFFF;
+  background: ${({theme}) => theme.pallet.whiteColor};
   width:280px;
   height:200px;
 
@@ -127,7 +127,7 @@ const ExtraServicesHeader = styled.div`
 
   margin-bottom: 1.5rem;
 
-  color: #1C1C1C;
+  color: ${({theme}) => theme.pallet.blackColor};
 `
 
 const ExtraServicesSection = styled.div`

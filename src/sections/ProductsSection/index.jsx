@@ -16,9 +16,11 @@ const ProductsSection = () => {
 
 
 const ProductsSectionContainer = styled.div`
-    display: grid;
-    grid-template-columns: 240px 1fr;
-    gap: 12px;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 12px;
+
+  margin-bottom: 10rem;
 `
 
 

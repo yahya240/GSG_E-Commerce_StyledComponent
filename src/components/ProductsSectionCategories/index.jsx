@@ -171,7 +171,7 @@ line-height: 19px;
 
 /* dark */
 
-color: #1C1C1C;
+color: ${({theme}) => theme.pallet.blackColor};
 `
 const ProductsCategoriesRangeInputsContainer = styled.div`
     width: 100%;
@@ -183,7 +183,7 @@ const ProductsCategoriesRangeButtonDiv = styled.div`
 const ProductsCategoriesRangeInputs = styled.input`
 width:110px;
 height:40px;
-background: #FFFFFF;
+background: ${({theme}) => theme.pallet.whiteColor};
 
 border: 1px solid #E3E8EE;
 border-radius: 6px;
@@ -213,12 +213,12 @@ const ProductsCategoriesListItemRange = styled.input`
 
     &::-webkit-slider-thumb{
         height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  border: 3px solid #1b53c0;
-  background-color: #fff;
-  pointer-events: auto;
-  -webkit-appearance: none;
+        width: 20px;
+        border-radius: 50%;
+        border: 3px solid #1b53c0;
+        background-color: #fff;
+        pointer-events: auto;
+        -webkit-appearance: none;
     }
 `
 const ProductsCategoriesRangeDiv = styled.div`
@@ -242,12 +242,12 @@ const ProductsCategoriesListItemText = styled.h4`
     color: ${(props) => props.textColor? props.textColor : '#505050'};
 `
 const ProductsCategoriesListItemRadio = styled.input`
-width: 20px;
-height: 20px;
+    width: 20px;
+    height: 20px;
 
-background: #979797;
-mix-blend-mode: normal;
-opacity: 0.54;
+    background: #979797;
+    mix-blend-mode: normal;
+    opacity: 0.54;
 `
 const ProductsCategoriesListItemCheckbox = styled.input`
     width: 1rem;
@@ -267,6 +267,8 @@ const ProductsSectionCategoriesContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 1rem;
+
+    margin-bottom: 3rem;
 `
 
 export default ProductsSectionCategories

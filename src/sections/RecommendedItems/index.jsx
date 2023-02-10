@@ -102,7 +102,7 @@ line-height: 24px;
 /* max-width: 160px; */
 padding: 0 16px 9px;
 
-color: #8B96A5;
+color: ${({theme}) => theme.pallet.greyColor4};
 `
 const RecommendedItemsCardPrice = styled.h4`
 font-weight: 600;
@@ -111,7 +111,7 @@ line-height: 22px;
 
 padding: 0 16px;
 
-color: #1C1C1C;
+color: ${({theme}) => theme.pallet.blackColor};
 
 `
 const RecommendedItemsCardImage = styled.img`
@@ -127,7 +127,7 @@ const RecommendedItemsCardImageDiv = styled.div`
 `
 const RecommendedItemsCard = styled.div`
 /* width: 220px; */
-background: #FFFFFF;
+background: ${({theme}) => theme.pallet.whiteColor};
 
 border: 1px solid #E0E0E0;
 border-radius: 6px;
@@ -158,7 +158,7 @@ line-height: 32px;
 
 margin-bottom: 1.5rem;
 
-color: #1C1C1C;
+color: ${({theme}) => theme.pallet.blackColor};
 `
 const RecommendedItemsSection = styled.div`
     margin-top: 30px;

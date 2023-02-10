@@ -77,7 +77,7 @@ const SingleProductDetailsRelatedProductsItemDetailsPrice = styled.p`
 
     /* gray-500 */
 
-    color: #8B96A5;
+    color: ${({theme}) => theme.pallet.greyColor4};
 `
 
 const SingleProductDetailsRelatedProductsItemDetailsName = styled.h4`
@@ -90,7 +90,7 @@ letter-spacing: -0.2px;
 
 /* dark */
 
-color: #1C1C1C;
+color: ${({theme}) => theme.pallet.blackColor};
 `
 
 const SingleProductDetailsRelatedProductsItemDetails = styled.div`
@@ -98,7 +98,7 @@ const SingleProductDetailsRelatedProductsItemDetails = styled.div`
 `
 
 const SingleProductDetailsRelatedProductsItemImage = styled.div`
-    background: #FFFFFF;
+    background: ${({theme}) => theme.pallet.whiteColor};
 /* base-color/gray-200 */
 
 border: 1px solid #E0E0E0;
@@ -125,11 +125,11 @@ line-height: 19px;
 
 /* base-color/dark */
 
-color: #1C1C1C;
+color: ${({theme}) => theme.pallet.blackColor};
 `
 
 const SingleProductDetailsRelatedProducts = styled.div`
-    background: #FFFFFF;
+    background: ${({theme}) => theme.pallet.whiteColor};
 
     border: 1px solid #E3E8EE;
     border-radius: 6px;

@@ -81,7 +81,7 @@ line-height: 19px;
 
 /* dark */
 
-color: #1C1C1C;
+color: ${({theme}) => theme.pallet.blackColor};
 `
 const MainHeroUserCardHeaderContentDiv = styled.div`
 
@@ -178,7 +178,7 @@ line-height: 39px;
 
 /* base-color/dark */
 
-color: #1C1C1C;
+color: ${({theme}) => theme.pallet.blackColor};
 
 margin-bottom: 15px;
 `
@@ -191,7 +191,7 @@ line-height: 34px;
 
 /* base-color/dark */
 
-color: #1C1C1C;
+color: ${({theme}) => theme.pallet.blackColor};
 `
 const MainHeroImageContent = styled.div`
     margin: 4rem 0 0 3rem;

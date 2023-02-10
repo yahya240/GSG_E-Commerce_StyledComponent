@@ -56,7 +56,7 @@ const SupliersRequestsFormButton =styled.div`
 const SupliersRequestsFormQuantitySelector =styled.select`
     width: 111px;
     height: 40px;
-    background: #FFFFFF;
+    background: ${({theme}) => theme.pallet.whiteColor};
 
     border: 1px solid #E3E8EE;
     border-radius: 6px;
@@ -67,7 +67,7 @@ const SupliersRequestsFormQuantitySelector =styled.select`
 const SupliersRequestsFormQuantityInput =styled.input`
     width: 100%;
     height: 40px;
-    background: #FFFFFF;
+    background: ${({theme}) => theme.pallet.whiteColor};
 
     border: 1px solid #E3E8EE;
     border-radius: 6px;
@@ -81,7 +81,7 @@ const SupliersRequestsFormQuantityInput =styled.input`
 
         /* gray-500 */
 
-        color: #8B96A5;
+        color: ${({theme}) => theme.pallet.greyColor4};
     }
 `
 
@@ -106,14 +106,14 @@ const SupliersRequestsFormTextarea =styled.textarea`
 
         /* gray-500 */
 
-        color: #8B96A5;
+        color: ${({theme}) => theme.pallet.greyColor4};
     }
 `
 
 const SupliersRequestsFormInput =styled.input`
     width: 100%;
     height: 40px;
-    background: #FFFFFF;
+    background: ${({theme}) => theme.pallet.whiteColor};
 
     border: 1px solid #E3E8EE;
     border-radius: 6px;
@@ -127,7 +127,7 @@ const SupliersRequestsFormInput =styled.input`
 
         /* gray-500 */
 
-        color: #8B96A5;
+        color: ${({theme}) => theme.pallet.greyColor4};
     }
 `
 
@@ -136,13 +136,13 @@ const SupliersRequestsFormHeader =styled.h4`
     font-size: 20px;
     line-height: 28px;
 
-    color: #1C1C1C;
+    color: ${({theme}) => theme.pallet.blackColor};
 `
 
 const SupliersRequestsForm =styled.form`
     width: 50%;
     padding: 23px 20px;
-    background: #FFFFFF;
+    background: ${({theme}) => theme.pallet.whiteColor};
     /* shadow-md */
 
     box-shadow: 0px 1px 2px rgba(56, 56, 56, 0.25);
@@ -156,7 +156,7 @@ const SupliersRequestsForm =styled.form`
 const SupliersRequestsContentDetails =styled.p`
     font-weight: 400;
     font-size: 16px;
-    color: #FFFFFF;
+    color: ${({theme}) => theme.pallet.whiteColor};
 
     max-width: 390px;
     margin-top: 1rem;
@@ -172,7 +172,7 @@ font-size: 32px;
 
 max-width: 440px;
 
-color: #FFFFFF;
+color: ${({theme}) => theme.pallet.whiteColor};
 `
 
 const SupliersRequestsContent =styled.div`

@@ -19,7 +19,7 @@ const SingleProductDetailsInfoFeatureText = styled.h4`
     font-size: 16px;
     line-height: 24px;
 
-    color: #505050;
+    color: ${({theme}) => theme.pallet.greyColor6};
 `
 
 const SingleProductDetailsInfoFeatureIcon = styled.img`

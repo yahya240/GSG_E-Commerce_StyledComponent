@@ -42,18 +42,16 @@ const ProductsSectionItemsOptionsinputsButtonsGridIcon = styled.img`
 const ProductsSectionItemsOptionsinputsButtonsBlock = styled.div`
     display: flex;
     align-items: center;
-    background: ${(props)=> props.grid? '#FFFFFF' : '#EFF2F4'};
+    background: ${(props)=> props.grid? props.theme.pallet.whiteColor : props.theme.pallet.greyColor5};
 
-    /* border-left: 1px solid #E3E8EE; */
     padding: 10px;
     cursor: pointer;
 `
 const ProductsSectionItemsOptionsinputsButtonsGrid = styled.div`
     display: flex;
     align-items: center;
-    background: ${(props)=> props.grid? '#EFF2F4' : '#FFFFFF'};
+    background: ${(props)=> props.grid? props.theme.pallet.greyColor5 : props.theme.pallet.whiteColor};
 
-    /* border: 1px solid #E3E8EE; */
     padding: 10px;
     cursor: pointer;
 `
@@ -75,7 +73,7 @@ const ProductsSectionItemsOptionsinputsOptions = styled.option`
 const ProductsSectionItemsOptionsinputsSelecor = styled.select`
     width: 172px;
     height: 40px;
-    background: #FFFFFF;
+    background: ${({theme}) => theme.pallet.whiteColor};
 
     outline: none;
     border: 1px solid #E3E8EE;
@@ -91,13 +89,13 @@ const ProductsSectionItemsOptionsinputsCheckboxLabel = styled.label`
 
     padding-left:13px;
 
-    color: #1C1C1C;
+    color: ${({theme}) => theme.pallet.blackColor};
 `
 const ProductsSectionItemsOptionsinputsCheckbox = styled.input`
     width: 20px;
 height: 20px;
 
-background: #0D6EFD;
+background: ${({theme}) => theme.pallet.blueColor};
 border-radius: 5px;
 `
 const ProductsSectionItemsOptionsinputsCheckboxDiv = styled.div`
@@ -109,14 +107,14 @@ const ProductsSectionItemsOptionsInfoTitle = styled.h4`
     font-size: 16px;
     line-height: 19px;
 
-    color: #1C1C1C;
+    color: ${({theme}) => theme.pallet.blackColor};
 `
 const ProductsSectionItemsOptionsInfoCount = styled.h4`
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
 
-    color: #1C1C1C;
+    color: ${({theme}) => theme.pallet.blackColor};
 `
 const ProductsSectionItemsOptionsinputs = styled.div`
     display: flex;
@@ -136,7 +134,7 @@ const ProductsSectionItemsOptions = styled.div`
     justify-content: space-between;
     align-items: center;
 
-    background: #FFFFFF;
+    background: ${({theme}) => theme.pallet.whiteColor};
     border: 1px solid #E3E8EE;
     border-radius: 6px;
     padding: 10px 0;

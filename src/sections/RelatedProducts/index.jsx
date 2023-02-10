@@ -99,7 +99,7 @@ line-height: 19px;
 
 /* gray-500 */
 
-color: #8B96A5;
+color: ${({theme}) => theme.pallet.greyColor4};;
 
 margin: 9px 0;
 `

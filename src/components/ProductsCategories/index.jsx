@@ -1,40 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 
 import ArrowUp from '../../assets/images/Vector3.png'
 
 const ProductsCategories = ({children,title}) => {
+
+    const [showContent,setShowContent] = useState(false)
+
+    const toggleShowContent = () => {
+        setShowContent(!showContent)
+    }
+
   return (
     <ProductsCategoriesList>
         <ProductsCategoriesListHeader>
             <ProductsCategoriesListHeaderText>{title}</ProductsCategoriesListHeaderText>
-            <ProductsCategoriesListHeaderIconDiv>
-                <ProductsCategoriesListHeaderIcon src={ArrowUp} />
+            <ProductsCategoriesListHeaderIconDiv onClick={toggleShowContent}>
+                <ProductsCategoriesListHeaderIcon showContent={showContent} src={ArrowUp} />
             </ProductsCategoriesListHeaderIconDiv>
         </ProductsCategoriesListHeader>
-        {children}
+        {showContent && children}
     </ProductsCategoriesList>
   )
 }
 
 
-// const ProductsCategoriesListItemText = styled.h4`
-//     font-weight: 400;
-//     font-size: 16px;
-//     line-height: 19px;
-
-//     padding: 0.7rem 0;
-
-//     color: #505050;
-// `
-// const ProductsCategoriesListItem = styled.div`
-
-// `
 const ProductsCategoriesListHeaderIcon = styled.img`
-
+    transform: ${(props)=> props.showContent?  ' ' : "rotate(180deg)"};
 `
 const ProductsCategoriesListHeaderIconDiv = styled.div`
-
+    margin-right: 14px;
+    cursor: pointer;
 `
 const ProductsCategoriesListHeaderText = styled.div`
 font-weight: 600;
@@ -43,7 +39,7 @@ line-height: 19px;
 
 padding: 1rem 0;
 
-color: #1C1C1C;
+color: ${({theme}) => theme.pallet.blackColor};
 `
 const ProductsCategoriesListHeader = styled.div`
     display: flex;

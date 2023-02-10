@@ -16,13 +16,13 @@ const CartCoupon = () => {
 const CouponApplyButton = styled.button`
     min-width: 85px;
     height: 40px;
-    color: #0D6EFD;
+    color: ${({theme}) => theme.pallet.blueColor};
     font-weight: 500;
     font-size: 16px;
 
     text-align: center;
 
-    background: #FFFFFF;
+    background: ${({theme}) => theme.pallet.whiteColor};
     border-left: none;
     border: 1px solid #E3E8EE;
     cursor: pointer;
@@ -34,7 +34,7 @@ const CouponApplyInput = styled.input`
     width:100%;
     min-width: 110px;
     height: 40px;
-    background: #FFFFFF;
+    background: ${({theme}) => theme.pallet.whiteColor};
     border: 1px solid #E0E0E0;
     padding-left: 10px;
 
@@ -46,7 +46,7 @@ const CouponApplyInput = styled.input`
         font-size: 16px;
         line-height: 19px;
 
-        color: #8B96A5;
+        color: ${({theme}) => theme.pallet.greyColor4};
     }
 `
 const CouponApply = styled.div`
@@ -59,10 +59,10 @@ const CouponHeader = styled.p`
     font-weight: 400;
     font-size: 16px;
 
-    color: #505050;
+    color: ${({theme}) => theme.pallet.greyColor6};
 `
 const CartPaymentMethodsCoupon = styled.div`
-    background: #FFFFFF;
+    background: ${({theme}) => theme.pallet.whiteColor};
 
     border: 1px solid #E3E8EE;
     border-radius: 6px;

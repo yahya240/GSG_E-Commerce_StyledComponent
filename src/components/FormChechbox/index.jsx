@@ -17,7 +17,7 @@ const FormChechboxLabel = styled.label`
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
-    color: #1C1C1C;
+    color: ${({theme}) => theme.pallet.blackColor};
 `
 
 const FormChechboxinput = styled.input`

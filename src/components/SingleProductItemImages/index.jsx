@@ -52,7 +52,7 @@ const SingleProductItemImagesShowContainer = styled.div`
     height: 56px;
     padding: 2px 0;
 
-    background: #FFFFFF;
+    background: ${({theme}) => theme.pallet.whiteColor};
 
     border: 1px solid #E3E8EE;
     border-radius: 4px;
@@ -68,7 +68,7 @@ const SingleProductItemImagesMainDiv = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #FFFFFF;
+    background: ${({theme}) => theme.pallet.whiteColor};
 
     border: 1px solid #E3E8EE;
     border-radius: 6px;
