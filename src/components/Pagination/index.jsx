@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components';
 
-const Pagination = ({productsPerPage, totalProducts, currentPage, setCurrentPage}) => {
-
+const Pagination = ({productsPerPage, totalProducts, currentPage, setCurrentPage, selected, setSelected}) => {
+  
   let pageNumbers = [];
+
   const numberOfPages = Math.ceil(totalProducts/productsPerPage);
 
   for(let i = 1; i <= numberOfPages; i++){
@@ -21,10 +22,17 @@ const Pagination = ({productsPerPage, totalProducts, currentPage, setCurrentPage
     }
   }
 
+  const handleSelect = (e)=> {
+    setSelected(e.target.value)
+  }
+
   return (
     <ProductsSectionPagination>
-    <ProductsSectionPaginationSelect>
-        <ProductsSectionPaginationOption>Show 10</ProductsSectionPaginationOption>
+    <ProductsSectionPaginationSelect value={selected} onChange={handleSelect}>
+        <ProductsSectionPaginationOption value={5}>Show 5</ProductsSectionPaginationOption>
+        <ProductsSectionPaginationOption value={10}>Show 10</ProductsSectionPaginationOption>
+        <ProductsSectionPaginationOption value={20}>Show 20</ProductsSectionPaginationOption>
+        <ProductsSectionPaginationOption value={30}>Show 30</ProductsSectionPaginationOption>
     </ProductsSectionPaginationSelect>
     <ProductsSectionPaginationPages>
       {console.log(typeof(currentPage))}

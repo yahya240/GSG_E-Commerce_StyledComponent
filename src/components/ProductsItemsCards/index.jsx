@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 
 import {ProductsItemsCard, ProductsItemsCard2, Pagination} from '../'
@@ -8,12 +8,17 @@ import { Products } from '../../Mock/Products'
 const ProductsItemsCards = ({ grid }) => {
   const [myProducts] = useState(Products)
   const [currentPage,setCurrentPage] = useState(1)
-  const [productPerPage] = useState(9)
-
+  const [productPerPage,setProductPerPage] = useState(9)
+  const [selected,setSelected] = useState(9)
 
   const indexOfLastProduct = currentPage * productPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productPerPage;
   const CurrentPageProducts = myProducts.slice(indexOfFirstProduct,indexOfLastProduct)
+
+  useEffect(()=>{
+    setProductPerPage(Number(selected))
+    setCurrentPage(1)
+  },[selected])
 
   if(grid){
     return (
@@ -31,7 +36,14 @@ const ProductsItemsCards = ({ grid }) => {
         })}
         </ProductsSectionItemsCards>
 
-        <Pagination productsPerPage={productPerPage} totalProducts={myProducts.length} currentPage={currentPage} setCurrentPage={setCurrentPage} />
+        <Pagination 
+          selected={selected} 
+          setSelected={setSelected}  
+          productsPerPage={productPerPage} 
+          totalProducts={myProducts.length} 
+          currentPage={currentPage} 
+          setCurrentPage={setCurrentPage} 
+        />
 
       </ProductsSectionItemsCardsDiv>
     )
@@ -55,7 +67,14 @@ const ProductsItemsCards = ({ grid }) => {
         })}
       </ProductsSectionItemsCards2>
 
-      <Pagination productsPerPage={productPerPage} totalProducts={myProducts.length} currentPage={currentPage} setCurrentPage={setCurrentPage} />
+      <Pagination 
+        selected={selected} 
+        setSelected={setSelected} 
+        productsPerPage={productPerPage} 
+        totalProducts={myProducts.length} 
+        currentPage={currentPage} 
+        setCurrentPage={setCurrentPage} 
+      />
 
     </ProductsSectionItemsCardsDiv>
   )
@@ -65,7 +84,6 @@ const ProductsItemsCards = ({ grid }) => {
 const ProductsSectionItemsCardsDiv = styled.div`
   
 `
-
 
 const ProductsSectionItemsCards2 = styled.div`
     display: grid;
