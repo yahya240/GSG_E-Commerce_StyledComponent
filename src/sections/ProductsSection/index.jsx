@@ -21,6 +21,10 @@ const ProductsSectionContainer = styled.div`
   gap: 12px;
 
   margin-bottom: 10rem;
+
+  @media screen and (max-width: 992px) {
+    grid-template-columns: 1fr;
+  }
 `
 
 

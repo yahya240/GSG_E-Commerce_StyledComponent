@@ -269,6 +269,10 @@ const ProductsSectionCategoriesContainer = styled.div`
     gap: 1rem;
 
     margin-bottom: 3rem;
+
+    @media screen and (max-width: 992px) {
+      display: none;
+    }
 `
 
 export default ProductsSectionCategories

@@ -7,6 +7,9 @@ import profileIcon from '../../assets/images/profile.png'
 import messageIcon from '../../assets/images/message.png'
 import orderIcon from '../../assets/images/order.png'
 import cartIcon from '../../assets/images/cart.png'
+import cartMobileIcon from '../../assets/images/cart-mobile.png'
+import profileMobileIcon from '../../assets/images/profile-moblie.png'
+// import burgerMobileIcon from '../../assets/images/burger-mobile.png'
 
 import { Container, Logo } from '../../components'
 
@@ -18,6 +21,10 @@ const MainHeader = () => {
 
             <MainHeaderLogo>
               <Logo />
+              <MainHeaderLogoIcons>
+                <MainHeaderLogoIcon src={cartMobileIcon} />
+                <MainHeaderLogoIcon src={profileMobileIcon} />
+              </MainHeaderLogoIcons>
             </MainHeaderLogo>
 
             <MainHeaderSearchBar>
@@ -37,11 +44,11 @@ const MainHeader = () => {
               </HeaderIconsDiv>
               <HeaderIconsDiv>
                 <HeaderIconImage src={messageIcon} />
-                <HeaderIconTitle>Message</HeaderIconTitle>
+                <HeaderIconTitle><Link to='/singleProduct'>Message</Link></HeaderIconTitle>
               </HeaderIconsDiv>
               <HeaderIconsDiv>
                 <HeaderIconImage src={orderIcon} />
-                <HeaderIconTitle>Orders</HeaderIconTitle>
+                <HeaderIconTitle><Link to='/products'>Orders</Link></HeaderIconTitle>
               </HeaderIconsDiv>
               <HeaderIconsDiv>
                 <HeaderIconImage src={cartIcon} />
@@ -55,6 +62,20 @@ const MainHeader = () => {
       </MainHeaderSection>
   )
 }
+
+const MainHeaderLogoIcon = styled.img`
+  
+`
+const MainHeaderLogoIcons = styled.div`
+  
+  display: none;
+
+  @media screen and (max-width: 1200px) {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+`
 
 const HeaderIconTitle = styled.p`
   font-weight: 400;
@@ -122,13 +143,19 @@ const MainHeaderIcons = styled.div`
   align-items: center;
   justify-content: center;
   gap:20px;
+
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
 `
 const MainHeaderSearchBar = styled.div`
   display: grid;
   grid-template-columns: 4fr 150px 100px;
 `
 const MainHeaderLogo = styled.div`
-  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `
 const MainHeaderContainer = styled.div`
   display: grid;
@@ -137,6 +164,10 @@ const MainHeaderContainer = styled.div`
   gap: 5%;
 
   padding: 1.2rem 0;
+
+  @media screen and (max-width: 1200px) {
+    grid-template-columns: 1fr;
+  }
 `
 const MainHeaderSection = styled.div`
   background-color: ${({theme}) => theme.pallet.whiteColor};

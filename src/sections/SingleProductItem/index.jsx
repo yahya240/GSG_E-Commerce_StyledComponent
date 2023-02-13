@@ -25,6 +25,10 @@ const SingleProductItemSection = styled.div`
     border: 1px solid #E3E8EE;
     border-radius: 6px;
     padding: 20px 20px 40px;
+
+    @media screen and (max-width: 960px){
+      grid-template-columns: 1fr  ;
+    }
 `
 
 export default SingleProductItem

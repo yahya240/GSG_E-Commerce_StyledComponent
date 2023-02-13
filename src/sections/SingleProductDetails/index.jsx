@@ -19,6 +19,10 @@ const SingleProductDetailsSection = styled.div`
     gap: 20px;
 
     margin: 20px 0;
+
+    @media screen and (max-width: 992px) {
+      grid-template-columns: 1fr;
+    }
 `
 
 export default SingleProductDetails

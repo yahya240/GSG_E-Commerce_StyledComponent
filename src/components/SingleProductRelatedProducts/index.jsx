@@ -84,13 +84,16 @@ const SingleProductDetailsRelatedProductsItemDetailsName = styled.h4`
 font-weight: 400;
 font-size: 16px;
 line-height: 24px;
-/* or 150% */
-
-letter-spacing: -0.2px;
-
-/* dark */
 
 color: ${({theme}) => theme.pallet.blackColor};
+
+    @media screen and (max-width: 992px) {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 16px;
+
+        color: ${({theme}) => theme.pallet.greyColor4};
+    }
 `
 
 const SingleProductDetailsRelatedProductsItemDetails = styled.div`
@@ -109,6 +112,10 @@ const SingleProductDetailsRelatedProductsItem = styled.div`
     display: flex;
     align-items: center;
     gap: 11px;
+
+    @media screen and (max-width: 992px) {
+        flex-direction: column;
+    }
 `
 
 const SingleProductDetailsRelatedProductsList = styled.div`
@@ -116,6 +123,10 @@ const SingleProductDetailsRelatedProductsList = styled.div`
     flex-direction: column;
     gap: 16px;
     margin-top: 14px;
+
+    @media screen and (max-width: 992px) {
+        flex-direction: row;
+    }
 `
 
 const SingleProductDetailsRelatedProductsHeader = styled.div`
@@ -135,6 +146,8 @@ const SingleProductDetailsRelatedProducts = styled.div`
     border-radius: 6px;
 
     padding: 20px 16px;
+
+    overflow-x: scroll;
 `
 
 export default SingleProductRelatedProducts

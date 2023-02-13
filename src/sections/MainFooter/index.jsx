@@ -190,6 +190,8 @@ const CompanyInfo = styled.div`
 const FooterContentContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
   padding: 2.5rem 0;
 `
 

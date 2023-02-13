@@ -90,7 +90,7 @@ const ProductsSectionItemsCardContentInfoStarsRate = styled.div`
 
 `
 const ProductsSectionItemsCardContentInfoStarsIcons = styled.div`
-    
+    min-width: max-content;
 `
 const ProductsSectionItemsCardContentHeardIcon = styled.img`
     
@@ -109,6 +109,10 @@ const ProductsSectionItemsCardContentInfoDetails = styled.p`
 const ProductsSectionItemsCardContentInfoStars = styled.div`
     display: flex;
     gap: 6px;
+
+    @media screen and (max-width: 600px) {
+    flex-direction: column;
+    }
 `
 const ProductsSectionItemsCardContentInfoPricePast = styled.span`
     font-weight: 400;

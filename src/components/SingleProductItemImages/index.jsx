@@ -62,7 +62,7 @@ const SingleProductItemImagesShowDiv = styled.div`
     justify-content: space-between;
 `
 const SingleProductItemImagesMain = styled.img`
-
+    object-fit: contain;
 `
 const SingleProductItemImagesMainDiv = styled.div`
     display: flex;
@@ -73,6 +73,7 @@ const SingleProductItemImagesMainDiv = styled.div`
     border: 1px solid #E3E8EE;
     border-radius: 6px;
     margin-bottom: 20px;
+    overflow: hidden;
 `
 const SingleProductItemImagesDiv = styled.div`
 

@@ -119,6 +119,11 @@ const ProductsSectionItemsOptionsInfoCount = styled.h4`
 const ProductsSectionItemsOptionsinputs = styled.div`
     display: flex;
     align-items: center;
+
+    @media screen and (max-width: 992px) {
+        width: 100%;
+        justify-content: space-around;
+    }
 `
 const ProductsSectionItemsOptionsInfo = styled.div`
     display: flex;

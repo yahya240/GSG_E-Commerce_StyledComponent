@@ -331,6 +331,10 @@ const CartPaymentSection = styled.div`
     gap: 20px;
 
     margin-top: 23px;
+
+    @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
 `
 
 export default CartPayment

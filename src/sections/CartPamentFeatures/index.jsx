@@ -61,13 +61,13 @@ const CartPamentFeaturesTitle = styled.h4`
     color: ${({theme}) => theme.pallet.blackColor};
 `
 const CartPamentFeaturesImage = styled.img`
-
+  object-fit: contain;
 `
 const CartPamentFeaturesContentDiv = styled.div`
 
 `
 const CartPamentFeaturesImageDiv = styled.div`
-    width: 48px;
+    min-width: 48px;
     height: 48px;
 
     border-radius: 50%;
@@ -85,8 +85,14 @@ const CartPamentFeaturesDiv = styled.div`
 const CartPamentFeaturesContainer = styled.div`
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 54px;
+
     margin: 30px 0;
+
+    @media screen and (max-width: 768px){
+      justify-content: center;
+    }
 `
 
 export default CartPamentFeatures

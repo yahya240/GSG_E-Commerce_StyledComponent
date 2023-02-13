@@ -159,6 +159,12 @@ const MainHomeOutDoorRight = styled.div`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr 1fr;
+
+    overflow: scroll;
+    
+    &::-webkit-scrollbar {
+        display: none;
+    }
 `
 
 
