@@ -106,6 +106,10 @@ const SearchBarButton = styled.button`
   border-top-right-radius: 5px ;
   border-bottom-right-radius: 5px ;
   border: 1px solid ${({theme}) => theme.pallet.blueColor};
+
+  @media screen and (max-width: 992px) {
+    display: none;
+  }
 `
 const SearchBarCategory = styled.select`
   height: 40px;
@@ -113,6 +117,10 @@ const SearchBarCategory = styled.select`
   outline: none;
   border-left: none;
   padding: 0 10px;
+
+  @media screen and (max-width: 992px) {
+    display: none;
+  }
 `
 
 const SearchBarCategoryOption = styled.option`
@@ -151,6 +159,10 @@ const MainHeaderIcons = styled.div`
 const MainHeaderSearchBar = styled.div`
   display: grid;
   grid-template-columns: 4fr 150px 100px;
+
+  @media screen and (max-width: 992px) {
+    grid-template-columns: 1fr;
+  }
 `
 const MainHeaderLogo = styled.div`
   display: flex;
