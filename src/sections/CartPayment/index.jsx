@@ -1,13 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { CartCoupon, ProductImage, CustomButton, CreditCardImage } from '../../components'
+import { CartCoupon, CustomButton, CreditCardImage, CartPaymentItem } from '../../components'
+import { cartData  } from '../../Mock/cartData'
 
-import tshirt from '../../assets/images/Bitmap.png'
-import bag from '../../assets/images/image-26.png'
-import chair from '../../assets/images/rasm.png'
 import arrowIcon from '../../assets/images/Vector5.png'
-
 import paymentIcon from '../../assets/images/payment.png'
 import visaIcon from '../../assets/images/visa.png'
 import expressIcon from '../../assets/images/express.png'
@@ -18,90 +15,18 @@ const CartPayment = () => {
   return (
     <CartPaymentSection>
         <CartPaymentItems>
-            <CartPaymentItemContainer>
-                <CartPaymentItem>
-
-                    <CartPaymentItemDetails>
-                        <ProductImage image={tshirt} width={80} height={80} bgColor={({theme}) => theme.pallet.whiteColor} />
-                        <CartPaymentItemDetailsContent>
-                            <DetailsContentTitle>T-shirts with multiple colors, for men and lady</DetailsContentTitle>
-                            <DetailsContentparagraph>Size: medium, Color: blue,  Material: PlasticSeller: Artel Market</DetailsContentparagraph>
-                            <DetailsContentButtons>
-                                <CustomButton fontColor={({theme}) => theme.pallet.redColor} bgColor={({theme}) => theme.pallet.whiteColor}>Remove</CustomButton>
-                                <CustomButton fontColor={({theme}) => theme.pallet.blueColor} bgColor={({theme}) => theme.pallet.whiteColor}>Save for later</CustomButton>
-                            </DetailsContentButtons>
-                        </CartPaymentItemDetailsContent>
-                    </CartPaymentItemDetails>
-
-                    <CartPaymentItemPriceQuantity>
-                        <CartPaymentItemPrice>$78.99</CartPaymentItemPrice>
-                        <CartPaymentItemQuantity>
-                            <CartPaymentItemQuantityOption value='Qty: 1'>Qty: 1</CartPaymentItemQuantityOption>
-                            <CartPaymentItemQuantityOption value='Qty: 2'>Qty: 2</CartPaymentItemQuantityOption>
-                            <CartPaymentItemQuantityOption value='Qty: 9'>Qty: 9</CartPaymentItemQuantityOption>
-                        </CartPaymentItemQuantity>
-                    </CartPaymentItemPriceQuantity>
-
-                </CartPaymentItem>
-            </CartPaymentItemContainer>
-
-            <CartPaymentItemContainer>
-                <CartPaymentItem>
-
-                    <CartPaymentItemDetails>
-                        <ProductImage image={bag} width={80} height={80} bgColor={({theme}) => theme.pallet.bgPrimary} />
-                        <CartPaymentItemDetailsContent>
-                            <DetailsContentTitle>T-shirts with multiple colors, for men and lady</DetailsContentTitle>
-                            <DetailsContentparagraph>Size: medium, Color: blue,  Material: PlasticSeller: Artel Market</DetailsContentparagraph>
-                            <DetailsContentButtons>
-                                <CustomButton fontColor={({theme}) => theme.pallet.redColor} bgColor={({theme}) => theme.pallet.whiteColor}>Remove</CustomButton>
-                                <CustomButton fontColor={({theme}) => theme.pallet.blueColor} bgColor={({theme}) => theme.pallet.whiteColor}>Save for later</CustomButton>
-                            </DetailsContentButtons>
-                        </CartPaymentItemDetailsContent>
-                    </CartPaymentItemDetails>
-
-                    <CartPaymentItemPriceQuantity>
-                        <CartPaymentItemPrice>$78.99</CartPaymentItemPrice>
-                        <CartPaymentItemQuantity>
-                            <CartPaymentItemQuantityOption value='Qty: 1'>Qty: 1</CartPaymentItemQuantityOption>
-                            <CartPaymentItemQuantityOption value='Qty: 2'>Qty: 2</CartPaymentItemQuantityOption>
-                            <CartPaymentItemQuantityOption value='Qty: 9'>Qty: 9</CartPaymentItemQuantityOption>
-                        </CartPaymentItemQuantity>
-                    </CartPaymentItemPriceQuantity>
-
-                </CartPaymentItem>
-            </CartPaymentItemContainer>
-
-            <CartPaymentItemContainer>
-                <CartPaymentItem>
-
-                    <CartPaymentItemDetails>
-                        <ProductImage image={chair} width={80} height={80} bgColor={({theme}) => theme.pallet.bgPrimary} />
-                        <CartPaymentItemDetailsContent>
-                            <DetailsContentTitle>T-shirts with multiple colors, for men and lady</DetailsContentTitle>
-                            <DetailsContentparagraph>Size: medium, Color: blue,  Material: PlasticSeller: Artel Market</DetailsContentparagraph>
-                            <DetailsContentButtons>
-                                <CustomButton fontColor={({theme}) => theme.pallet.redColor} bgColor={({theme}) => theme.pallet.whiteColor}>Remove</CustomButton>
-                                <CustomButton fontColor={({theme}) => theme.pallet.blueColor} bgColor={({theme}) => theme.pallet.whiteColor}>Save for later</CustomButton>
-                            </DetailsContentButtons>
-                        </CartPaymentItemDetailsContent>
-                    </CartPaymentItemDetails>
-
-                    <CartPaymentItemPriceQuantity>
-                        <CartPaymentItemPrice>$78.99</CartPaymentItemPrice>
-                        <CartPaymentItemQuantity>
-                            <CartPaymentItemQuantityOption value='Qty: 1'>Qty: 1</CartPaymentItemQuantityOption>
-                            <CartPaymentItemQuantityOption value='Qty: 2'>Qty: 2</CartPaymentItemQuantityOption>
-                            <CartPaymentItemQuantityOption value='Qty: 9'>Qty: 9</CartPaymentItemQuantityOption>
-                        </CartPaymentItemQuantity>
-                    </CartPaymentItemPriceQuantity>
-
-                </CartPaymentItem>
-            </CartPaymentItemContainer>
+            {cartData.map((item)=>{
+                return <CartPaymentItem 
+                    image={item.image}
+                    title={item.title}
+                    text={item.text}
+                    price={item.price}
+                />
+            })}
             <CartPaymentItemsButtons>
                 <CustomButton bgColor={({theme}) => theme.pallet.blueColor} fontColor={({theme}) => theme.pallet.whiteColor}>
                     <ArrowIconImage src={arrowIcon} />
-                    Back to shop
+                        Back to shop
                     </CustomButton>
                 <CustomButton fontColor={({theme}) => theme.pallet.blueColor} bgColor={({theme}) => theme.pallet.whiteColor}>Remove all</CustomButton>
             </CartPaymentItemsButtons>
@@ -159,50 +84,36 @@ const MethodsCheckoutDetailsLine = styled.hr`
 `
 const MethodsCheckoutDetailsItemTotalAmount = styled.p`
     font-weight: 600;
-font-size: 20px;
-line-height: 28px;
-/* identical to box height, or 140% */
+    font-size: 20px;
+    line-height: 28px;
 
-text-align: right;
-letter-spacing: -0.2px;
+    text-align: right;
 
-/* dark */
 
-color: ${({theme}) => theme.pallet.blackColor};
+    color: ${({theme}) => theme.pallet.blackColor};
 `
 const MethodsCheckoutDetailsItemTotalTitle = styled.h4`
     font-weight: 600;
-font-size: 16px;
-line-height: 19px;
+    font-size: 16px;
+    line-height: 19px;
 
-/* dark */
-
-color: ${({theme}) => theme.pallet.blackColor};
+    color: ${({theme}) => theme.pallet.blackColor};
 `
 const MethodsCheckoutDetailsItemAmount = styled.p`
     font-size: 16px;
-line-height: 24px;
-/* identical to box height, or 150% */
+    line-height: 24px;
 
-text-align: right;
-letter-spacing: -0.2px;
+    text-align: right;
+    letter-spacing: -0.2px;
 
-/* gray-600 */
-
-color: ${(props)=> props.fontColor};
-
+    color: ${(props)=> props.fontColor};
 `
 const MethodsCheckoutDetailsItemTitle = styled.h4`
     font-weight: 400;
-font-size: 16px;
-line-height: 24px;
-/* identical to box height, or 150% */
+    font-size: 16px;
+    line-height: 24px;
 
-letter-spacing: -0.2px;
-
-/* gray-600 */
-
-color: ${({theme}) => theme.pallet.greyColor6};
+    color: ${({theme}) => theme.pallet.greyColor6};
 `
 const MethodsCheckoutDetailsItem = styled.div`
     display: flex;
@@ -216,8 +127,7 @@ const CartPaymentMethodsCheckoutDetails = styled.div`
 const CartPaymentMethodsCheckoutContainer = styled.div`
     width: 100%;
     height: 100%;
-    /* background-color: green; */
-    /* padding: 20px 16px; */
+
 `
 const ArrowIconImage = styled.img`
     
@@ -229,86 +139,12 @@ const CartPaymentItemsButtons = styled.div`
     align-items: center;
     margin: 20px;
 `
-const CartPaymentItemQuantityOption = styled.option`
-
-`
-
-const CartPaymentItemQuantity = styled.select`
-    width: 123px;
-    height: 40px;
-    background: ${({theme}) => theme.pallet.whiteColor};
-
-    outline: none;
-    border: 1px solid ${({theme}) => theme.pallet.whiteColor2};
-    border-radius: 6px;
-    padding-right: 1rem;
-    margin-top: 12px;
-`
-
-const CartPaymentItemPrice = styled.h4`
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 22px;
-    /* identical to box height, or 138% */
-
-    text-align: right;
-
-    /* base-color/dark */
-
-    color: ${({theme}) => theme.pallet.blackColor};
-`
-
-const CartPaymentItemPriceQuantity = styled.div`
-
-`
-
-const DetailsContentButtons = styled.div`
-    display: flex;
-    gap: 6px;
-`
-const DetailsContentparagraph = styled.p`
-    max-width: 360px;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-
-    color: ${({theme}) => theme.pallet.greyColor4};
-    margin: 6px 0 10px;
-`
-const DetailsContentTitle = styled.h4`
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 22px;
-
-    color: ${({theme}) => theme.pallet.blackColor};
-`
-const CartPaymentItemDetailsContent = styled.div`
-    
-`
-
-const CartPaymentItemDetails = styled.div`
-    display: flex;
-    /* align-items: center; */
-    gap: 10px;
-`
-const CartPaymentItem = styled.div`
-    width: 95%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 23px 0;
-    border-bottom: 1px solid ${({theme}) => theme.pallet.whiteColor2};
-`
-
 
 const CartPaymentMethodsCheckout = styled.div`
     background: ${({theme}) => theme.pallet.whiteColor};
 
     border: 1px solid ${({theme}) => theme.pallet.whiteColor2};
     border-radius: 6px;
-    /* height: 302px; */
 
     padding: 20px 16px;
 `
@@ -316,9 +152,7 @@ const CartPaymentMethodsCheckout = styled.div`
 const CartPaymentMethods = styled.div`
 
 `
-const CartPaymentItemContainer = styled.div`
 
-`
 const CartPaymentItems = styled.div`
     background: ${({theme}) => theme.pallet.whiteColor};
 

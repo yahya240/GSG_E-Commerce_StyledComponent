@@ -70,44 +70,6 @@ const Login = () => {
   )
 }
 
-// const FormSectionFooter = styled.div`
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     gap:0.2rem;
-//     margin: 1.5rem 0 0;
-
-//     a{
-//         text-decoration:none;
-//         color: ${props => props.theme.pallet.blueColor};
-//     }
-// `
-// const FormSectionFooterH3 = styled.h3`
-//     font-weight: 500;
-//     font-size: ${props => props.theme.fontSizes.h4}rem;
-//     line-height: 24px;
-//     color: ${props => props.theme.pallet.blackColor2};
-// `
-
-// const FormSectionFooterLink = styled(Link)`
-
-// `
-
-// const FormHeader = styled.h3`
-//     color: ${props => props.theme.pallet.blackColor};
-//     font-size: ${props => props.theme.fontSizes.h3}rem;
-//     font-weight: 600;
-//     line-height: 32px;
-// `
-
-// const FormSection = styled.form`
-//     width: 387px;
-//     min-height: 361px;
-//     background-color: ${props => props.theme.pallet.whiteColor};
-
-//     box-shadow: 0px 3px 10px rgba(32, 32, 32, 0.1);
-//     border-radius: 6px;
-// `
 
 
 export default Login

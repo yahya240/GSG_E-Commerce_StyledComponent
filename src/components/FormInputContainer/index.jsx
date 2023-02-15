@@ -60,7 +60,7 @@ const FormInput = styled.input`
         color: ${props => props.theme.pallet.greyColor};
     }
 
-    outline: none;
+    outline: transparent;
 `
 
 const FormLable = styled.label`

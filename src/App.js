@@ -8,19 +8,20 @@ import GlobalStyle from './global/globalStyle';
 // routes 
 import MainRoutes from './routes';
 
-// pages
-// import { Register, Login, Main, SingleProduct, Products, Cart } from './pages';
-// import NotFound from './Errors/NotFound'
+// Error Boundary
+import ErrorBoundary from './Errors/ErrorBoundary';
 
 
 function App() {
   return (
     <>
       <ThemeProvider theme={lightTheme}>
-        <GlobalStyle />
-        <Routes>
-          <Route path="/*" element={<MainRoutes />} />
-        </Routes>
+          <GlobalStyle />
+          <ErrorBoundary>
+            <Routes>
+              <Route path="/*" element={<MainRoutes />} />
+            </Routes>
+        </ErrorBoundary>
       </ThemeProvider>
     </>
   );

@@ -46,6 +46,10 @@ const FormFooterContainer = styled.div`
   position: absolute;
   bottom: 0;
   background-color: ${props => props.theme.pallet.whiteColor};
+
+  @media screen and (max-width: 576px){
+    display: none;
+  }
 `
 
 export default FormFooter

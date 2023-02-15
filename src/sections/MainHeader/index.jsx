@@ -40,7 +40,7 @@ const MainHeader = () => {
 
               <HeaderIconsDiv>
                 <HeaderIconImage src={profileIcon} />
-                <HeaderIconTitle>Profile</HeaderIconTitle>
+                <HeaderIconTitle><Link to='/login'>Profile</Link></HeaderIconTitle>
               </HeaderIconsDiv>
               <HeaderIconsDiv>
                 <HeaderIconImage src={messageIcon} />
