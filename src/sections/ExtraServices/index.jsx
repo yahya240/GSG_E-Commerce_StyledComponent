@@ -1,7 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { ExtraServicesCard } from '../../components'
+
 import ServiceBg from '../../assets/images/image-108.png'
+import ServiceBg2 from '../../assets/images/product.png'
+import ServiceBg3 from '../../assets/images/fly.png'
+import ServiceBg4 from '../../assets/images/product2.png'
 import ServiceIcon from '../../assets/images/Vector22.png'
 
 const ExtraServices = () => {
@@ -10,114 +15,41 @@ const ExtraServices = () => {
       <ExtraServicesHeader>Our extra services</ExtraServicesHeader>
 
       <ExtraServicesCards>
-
-        <ExtraServicesCard>
-          <ExtraServicesCardImageDiv bgImage={ServiceBg} >
-            <ExtraServicesCardImageMask></ExtraServicesCardImageMask>
-          </ExtraServicesCardImageDiv>
-          <ExtraServicesCardContent>Source from Industry Hubs</ExtraServicesCardContent>
-          <ExtraServicesCardIconDiv>
-            <ExtraServicesCardIcon src={ServiceIcon} />
-          </ExtraServicesCardIconDiv>
-        </ExtraServicesCard>
-
-        <ExtraServicesCard>
-          <ExtraServicesCardImageDiv bgImage={ServiceBg} >
-            <ExtraServicesCardImageMask></ExtraServicesCardImageMask>
-          </ExtraServicesCardImageDiv>
-          <ExtraServicesCardContent>Source from Industry Hubs</ExtraServicesCardContent>
-          <ExtraServicesCardIconDiv>
-            <ExtraServicesCardIcon src={ServiceIcon} />
-          </ExtraServicesCardIconDiv>
-        </ExtraServicesCard>
-
-        <ExtraServicesCard>
-          <ExtraServicesCardImageDiv bgImage={ServiceBg} >
-            <ExtraServicesCardImageMask></ExtraServicesCardImageMask>
-          </ExtraServicesCardImageDiv>
-          <ExtraServicesCardContent>Source from Industry Hubs</ExtraServicesCardContent>
-          <ExtraServicesCardIconDiv>
-            <ExtraServicesCardIcon src={ServiceIcon} />
-          </ExtraServicesCardIconDiv>
-        </ExtraServicesCard>
-
-        <ExtraServicesCard>
-          <ExtraServicesCardImageDiv bgImage={ServiceBg} >
-            <ExtraServicesCardImageMask></ExtraServicesCardImageMask>
-          </ExtraServicesCardImageDiv>
-          <ExtraServicesCardContent>Source from Industry Hubs</ExtraServicesCardContent>
-          <ExtraServicesCardIconDiv>
-            <ExtraServicesCardIcon src={ServiceIcon} />
-          </ExtraServicesCardIconDiv>
-        </ExtraServicesCard>
-
+        <ExtraServicesCard
+          bgImage={ServiceBg}
+          icon={ServiceIcon}
+          text='Source from Industry Hubs'
+        />
+        <ExtraServicesCard
+          bgImage={ServiceBg2}
+          icon={ServiceIcon}
+          text='Source from Industry Hubs'
+        />
+        <ExtraServicesCard
+          bgImage={ServiceBg3}
+          icon={ServiceIcon}
+          text='Source from Industry Hubs'
+        />
+        <ExtraServicesCard
+          bgImage={ServiceBg4}
+          icon={ServiceIcon}
+          text='Source from Industry Hubs'
+        />
       </ExtraServicesCards>
 
     </ExtraServicesSection>
   )
 }
 
-const ExtraServicesCardImageMask = styled.div`
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  opacity: 0.5;
-`
-const ExtraServicesCardIcon = styled.img`
-
-`
-const ExtraServicesCardIconDiv = styled.div`
-  position: absolute;
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  
-  background: #D1E7FF;
-  border: 2px solid #FFFFFF;
-
-  right: 1.5rem;
-  top: 45%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`
-
-const ExtraServicesCardContent = styled.div`
-    font-weight: 600;
-font-size: 16px;
-line-height: 22px;
-
-margin: 16px 20px 20px;
-max-width: 140px;
-
-color: ${({theme}) => theme.pallet.blackColor};
-`
-
-const ExtraServicesCardImageDiv = styled.div`
-  height: 60%;
-    background-image: url(${(props)=> props.bgImage});
-    background-position: center; 
-    background-repeat: no-repeat;
-    background-size: cover;
-`
-
-const ExtraServicesCard = styled.div`
-  background: ${({theme}) => theme.pallet.whiteColor};
-  width:280px;
-  height:200px;
-
-  border: 1px solid #E0E0E0;
-  border-radius: 6px;
-
-  position: relative;
-`
-
 const ExtraServicesCards = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 10px;
+
+  @media screen and (max-width: 992px) {
+    justify-content: space-around;
+  }
 `
 
 const ExtraServicesHeader = styled.div`

@@ -1,10 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { CustomButton } from '../../components'
+import { CustomButton, HomeOutDoorItem } from '../../components'
 
 import electronicsBg from '../../assets/images/image-98.png'
-import rasmImage from '../../assets/images/rasm.png'
+import watch from '../../assets/images/watch.png'
+import imgcard7 from '../../assets/images/imgcard7.png'
+import imgstore5 from '../../assets/images/imgstore5.png'
+import imgstore1 from '../../assets/images/imgstore1.png'
+import image32 from '../../assets/images/image-32.png'
+import image34 from '../../assets/images/image-34.png'
+import image29 from '../../assets/images/image-29.png'
 
 
 const ElectronicsAndGadgets = () => {
@@ -21,96 +27,46 @@ const ElectronicsAndGadgets = () => {
             </ElectronicsAndGadgetsLeft>
 
             <ElectronicsAndGadgetsRight>
-                
-            <ElectronicsAndGadgetsRightItem>
-                    <ElectronicsAndGadgetsRightItemText>
-                        <ElectronicsAndGadgetsRightItemTextHeader>Soft chairs</ElectronicsAndGadgetsRightItemTextHeader>
-                        <ElectronicsAndGadgetsRightItemTextPharagraph>From USD 19</ElectronicsAndGadgetsRightItemTextPharagraph>
-                    </ElectronicsAndGadgetsRightItemText>
-
-                    <ElectronicsAndGadgetsRightItemImageDiv>
-                        <ElectronicsAndGadgetsRightItemImage src={rasmImage} />
-                    </ElectronicsAndGadgetsRightItemImageDiv>
-                </ElectronicsAndGadgetsRightItem>
-                
-
-                <ElectronicsAndGadgetsRightItem>
-                    <ElectronicsAndGadgetsRightItemText>
-                        <ElectronicsAndGadgetsRightItemTextHeader>Soft chairs</ElectronicsAndGadgetsRightItemTextHeader>
-                        <ElectronicsAndGadgetsRightItemTextPharagraph>From USD 19</ElectronicsAndGadgetsRightItemTextPharagraph>
-                    </ElectronicsAndGadgetsRightItemText>
-
-                    <ElectronicsAndGadgetsRightItemImageDiv>
-                        <ElectronicsAndGadgetsRightItemImage src={rasmImage} />
-                    </ElectronicsAndGadgetsRightItemImageDiv>
-                </ElectronicsAndGadgetsRightItem>
-
-                <ElectronicsAndGadgetsRightItem>
-                    <ElectronicsAndGadgetsRightItemText>
-                        <ElectronicsAndGadgetsRightItemTextHeader>Soft chairs</ElectronicsAndGadgetsRightItemTextHeader>
-                        <ElectronicsAndGadgetsRightItemTextPharagraph>From USD 19</ElectronicsAndGadgetsRightItemTextPharagraph>
-                    </ElectronicsAndGadgetsRightItemText>
-
-                    <ElectronicsAndGadgetsRightItemImageDiv>
-                        <ElectronicsAndGadgetsRightItemImage src={rasmImage} />
-                    </ElectronicsAndGadgetsRightItemImageDiv>
-                </ElectronicsAndGadgetsRightItem>
-
-                <ElectronicsAndGadgetsRightItem>
-                    <ElectronicsAndGadgetsRightItemText>
-                        <ElectronicsAndGadgetsRightItemTextHeader>Soft chairs</ElectronicsAndGadgetsRightItemTextHeader>
-                        <ElectronicsAndGadgetsRightItemTextPharagraph>From USD 19</ElectronicsAndGadgetsRightItemTextPharagraph>
-                    </ElectronicsAndGadgetsRightItemText>
-
-                    <ElectronicsAndGadgetsRightItemImageDiv>
-                        <ElectronicsAndGadgetsRightItemImage src={rasmImage} />
-                    </ElectronicsAndGadgetsRightItemImageDiv>
-                </ElectronicsAndGadgetsRightItem>
-
-                <ElectronicsAndGadgetsRightItem>
-                    <ElectronicsAndGadgetsRightItemText>
-                        <ElectronicsAndGadgetsRightItemTextHeader>Soft chairs</ElectronicsAndGadgetsRightItemTextHeader>
-                        <ElectronicsAndGadgetsRightItemTextPharagraph>From USD 19</ElectronicsAndGadgetsRightItemTextPharagraph>
-                    </ElectronicsAndGadgetsRightItemText>
-
-                    <ElectronicsAndGadgetsRightItemImageDiv>
-                        <ElectronicsAndGadgetsRightItemImage src={rasmImage} />
-                    </ElectronicsAndGadgetsRightItemImageDiv>
-                </ElectronicsAndGadgetsRightItem>
-
-                <ElectronicsAndGadgetsRightItem>
-                    <ElectronicsAndGadgetsRightItemText>
-                        <ElectronicsAndGadgetsRightItemTextHeader>Soft chairs</ElectronicsAndGadgetsRightItemTextHeader>
-                        <ElectronicsAndGadgetsRightItemTextPharagraph>From USD 19</ElectronicsAndGadgetsRightItemTextPharagraph>
-                    </ElectronicsAndGadgetsRightItemText>
-
-                    <ElectronicsAndGadgetsRightItemImageDiv>
-                        <ElectronicsAndGadgetsRightItemImage src={rasmImage} />
-                    </ElectronicsAndGadgetsRightItemImageDiv>
-                </ElectronicsAndGadgetsRightItem>
-
-                <ElectronicsAndGadgetsRightItem>
-                    <ElectronicsAndGadgetsRightItemText>
-                        <ElectronicsAndGadgetsRightItemTextHeader>Soft chairs</ElectronicsAndGadgetsRightItemTextHeader>
-                        <ElectronicsAndGadgetsRightItemTextPharagraph>From USD 19</ElectronicsAndGadgetsRightItemTextPharagraph>
-                    </ElectronicsAndGadgetsRightItemText>
-
-                    <ElectronicsAndGadgetsRightItemImageDiv>
-                        <ElectronicsAndGadgetsRightItemImage src={rasmImage} />
-                    </ElectronicsAndGadgetsRightItemImageDiv>
-                </ElectronicsAndGadgetsRightItem>
-
-                <ElectronicsAndGadgetsRightItem>
-                    <ElectronicsAndGadgetsRightItemText>
-                        <ElectronicsAndGadgetsRightItemTextHeader>Soft chairs</ElectronicsAndGadgetsRightItemTextHeader>
-                        <ElectronicsAndGadgetsRightItemTextPharagraph>From USD 19</ElectronicsAndGadgetsRightItemTextPharagraph>
-                    </ElectronicsAndGadgetsRightItemText>
-
-                    <ElectronicsAndGadgetsRightItemImageDiv>
-                        <ElectronicsAndGadgetsRightItemImage src={rasmImage} />
-                    </ElectronicsAndGadgetsRightItemImageDiv>
-                </ElectronicsAndGadgetsRightItem>
-
+                <HomeOutDoorItem 
+                    image={watch}
+                    title='Smart watches'
+                    text='From USD 19'
+                />
+                <HomeOutDoorItem 
+                    image={imgcard7}
+                    title='Cameras'
+                    text='From USD 19'
+                />
+                <HomeOutDoorItem 
+                    image={imgstore5}
+                    title='Headphones'
+                    text='From USD 19'
+                />
+                <HomeOutDoorItem 
+                    image={image29}
+                    title='Gaming set'
+                    text='From USD 19'
+                />
+                <HomeOutDoorItem 
+                    image={image34}
+                    title='Laptops & PC'
+                    text='From USD 19'
+                />
+                <HomeOutDoorItem 
+                    image={image29}
+                    title='Smartphones'
+                    text='From USD 19'
+                />
+                <HomeOutDoorItem 
+                    image={image32}
+                    title='Electric kattle'
+                    text='From USD 19'
+                />
+                <HomeOutDoorItem 
+                    image={imgstore1}
+                    title='Smart watches'
+                    text='From USD 19'
+                />
             </ElectronicsAndGadgetsRight>
 
         </ElectronicsAndGadgetsContainer>
@@ -118,54 +74,10 @@ const ElectronicsAndGadgets = () => {
   )
 }
 
-
-const ElectronicsAndGadgetsRightItemImage = styled.img`
-    
-`
-const ElectronicsAndGadgetsRightItemImageDiv = styled.div`
-    
-`
-const ElectronicsAndGadgetsRightItemTextPharagraph = styled.p`
-    font-weight: 400;
-font-size: 13px;
-line-height: 16px;
-
-margin-top: 9px;
-max-width: 50px;
-
-color: ${({theme}) => theme.pallet.greyColor4};
-`
-const ElectronicsAndGadgetsRightItemTextHeader = styled.h4`
-    font-weight: 400;
-font-size: 16px;
-line-height: 19px;
-
-/* base-color/dark */
-
-color: ${({theme}) => theme.pallet.blackColor};
-`
-const ElectronicsAndGadgetsRightItemText = styled.div`
-    
-`
-const ElectronicsAndGadgetsRightItem = styled.div`
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-    border: 1px solid #E0E0E0;
-`
-
 const ElectronicsAndGadgetsRight = styled.div`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr 1fr;
-
-    overflow: scroll;
-    
-    &::-webkit-scrollbar {
-        display: none;
-    }
 `
 
 const ElectronicsAndGadgetsLeftDivbutton = styled.div`
@@ -203,7 +115,6 @@ const ElectronicsAndGadgetsContainer = styled.div`
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 3fr;
-    /* grid-row: auto; */
 `
 
 const ElectronicsAndGadgetsSection = styled.div`
@@ -216,6 +127,12 @@ const ElectronicsAndGadgetsSection = styled.div`
     border-radius: 6px;
 
     margin-top: 20px;
+
+    overflow: scroll;
+    
+    &::-webkit-scrollbar {
+        display: none;
+    }
 `
 
 export default ElectronicsAndGadgets

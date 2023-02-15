@@ -1,135 +1,76 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { RecommendedItemsCard } from '../../components'
+
 import tShirt from '../../assets/images/Bitmap22.png'
+import sweetir from '../../assets/images/sweetir.png'
+import bag from '../../assets/images/bag.png'
+import jeansshort from '../../assets/images/jeansshort.png'
+import jacket from '../../assets/images/jacket.png'
+import jzdan from '../../assets/images/jzdan.png'
+import imgstore5 from '../../assets/images/imgstore5.png'
 
 const RecommendedItems = () => {
   return (
     <RecommendedItemsSection>
         <RecommendedItemsHeader>Recommended items</RecommendedItemsHeader>
         <RecommendedItemsCards>
-
-            <RecommendedItemsCard>
-                <RecommendedItemsCardImageDiv>
-                    <RecommendedItemsCardImage src={tShirt} />
-                </RecommendedItemsCardImageDiv>
-                <RecommendedItemsCardPrice>$10.30</RecommendedItemsCardPrice>
-                <RecommendedItemsCardText>T-shirts with multiple colors, for men</RecommendedItemsCardText>
-            </RecommendedItemsCard>
-
-            <RecommendedItemsCard>
-                <RecommendedItemsCardImageDiv>
-                    <RecommendedItemsCardImage src={tShirt} />
-                </RecommendedItemsCardImageDiv>
-                <RecommendedItemsCardPrice>$10.30</RecommendedItemsCardPrice>
-                <RecommendedItemsCardText>T-shirts with multiple colors, for men</RecommendedItemsCardText>
-            </RecommendedItemsCard>
-
-            <RecommendedItemsCard>
-                <RecommendedItemsCardImageDiv>
-                    <RecommendedItemsCardImage src={tShirt} />
-                </RecommendedItemsCardImageDiv>
-                <RecommendedItemsCardPrice>$10.30</RecommendedItemsCardPrice>
-                <RecommendedItemsCardText>T-shirts with multiple colors, for men</RecommendedItemsCardText>
-            </RecommendedItemsCard>
-
-            <RecommendedItemsCard>
-                <RecommendedItemsCardImageDiv>
-                    <RecommendedItemsCardImage src={tShirt} />
-                </RecommendedItemsCardImageDiv>
-                <RecommendedItemsCardPrice>$10.30</RecommendedItemsCardPrice>
-                <RecommendedItemsCardText>T-shirts with multiple colors, for men</RecommendedItemsCardText>
-            </RecommendedItemsCard>
-
-            <RecommendedItemsCard>
-                <RecommendedItemsCardImageDiv>
-                    <RecommendedItemsCardImage src={tShirt} />
-                </RecommendedItemsCardImageDiv>
-                <RecommendedItemsCardPrice>$10.30</RecommendedItemsCardPrice>
-                <RecommendedItemsCardText>T-shirts with multiple colors, for men</RecommendedItemsCardText>
-            </RecommendedItemsCard>
-
-            <RecommendedItemsCard>
-                <RecommendedItemsCardImageDiv>
-                    <RecommendedItemsCardImage src={tShirt} />
-                </RecommendedItemsCardImageDiv>
-                <RecommendedItemsCardPrice>$10.30</RecommendedItemsCardPrice>
-                <RecommendedItemsCardText>T-shirts with multiple colors, for men</RecommendedItemsCardText>
-            </RecommendedItemsCard>
-
-            <RecommendedItemsCard>
-                <RecommendedItemsCardImageDiv>
-                    <RecommendedItemsCardImage src={tShirt} />
-                </RecommendedItemsCardImageDiv>
-                <RecommendedItemsCardPrice>$10.30</RecommendedItemsCardPrice>
-                <RecommendedItemsCardText>T-shirts with multiple colors, for men</RecommendedItemsCardText>
-            </RecommendedItemsCard>
-
-            <RecommendedItemsCard>
-                <RecommendedItemsCardImageDiv>
-                    <RecommendedItemsCardImage src={tShirt} />
-                </RecommendedItemsCardImageDiv>
-                <RecommendedItemsCardPrice>$10.30</RecommendedItemsCardPrice>
-                <RecommendedItemsCardText>T-shirts with multiple colors, for men</RecommendedItemsCardText>
-            </RecommendedItemsCard>
-
-            <RecommendedItemsCard>
-                <RecommendedItemsCardImageDiv>
-                    <RecommendedItemsCardImage src={tShirt} />
-                </RecommendedItemsCardImageDiv>
-                <RecommendedItemsCardPrice>$10.30</RecommendedItemsCardPrice>
-                <RecommendedItemsCardText>T-shirts with multiple colors, for men</RecommendedItemsCardText>
-            </RecommendedItemsCard>
-
-            <RecommendedItemsCard>
-                <RecommendedItemsCardImageDiv>
-                    <RecommendedItemsCardImage src={tShirt} />
-                </RecommendedItemsCardImageDiv>
-                <RecommendedItemsCardPrice>$10.30</RecommendedItemsCardPrice>
-                <RecommendedItemsCardText>T-shirts with multiple colors, for men</RecommendedItemsCardText>
-            </RecommendedItemsCard>
-
+            <RecommendedItemsCard 
+                image={tShirt}
+                price ='10.30'
+                text='T-shirts with multiple colors, for men'
+            />
+            <RecommendedItemsCard 
+                image={sweetir}
+                price ='10.30'
+                text='T-shirts with multiple colors, for men'
+            />
+            <RecommendedItemsCard 
+                image={jacket}
+                price ='10.30'
+                text='T-shirts with multiple colors, for men'
+            />
+            <RecommendedItemsCard 
+                image={jzdan}
+                price ='10.30'
+                text='T-shirts with multiple colors, for men'
+            />
+            <RecommendedItemsCard 
+                image={bag}
+                price ='10.30'
+                text='T-shirts with multiple colors, for men'
+            />
+            <RecommendedItemsCard 
+                image={jeansshort}
+                price ='10.30'
+                text='T-shirts with multiple colors, for men'
+            />
+            <RecommendedItemsCard 
+                image={imgstore5}
+                price ='10.30'
+                text='T-shirts with multiple colors, for men'
+            />
+            <RecommendedItemsCard 
+                image={bag}
+                price ='10.30'
+                text='T-shirts with multiple colors, for men'
+            />
+            <RecommendedItemsCard 
+                image={jacket}
+                price ='10.30'
+                text='T-shirts with multiple colors, for men'
+            />
+            <RecommendedItemsCard 
+                image={sweetir}
+                price ='10.30'
+                text='T-shirts with multiple colors, for men'
+            />
         </RecommendedItemsCards>
     </RecommendedItemsSection>
   )
 }
 
-const RecommendedItemsCardText = styled.p`
-font-weight: 400;
-font-size: 16px;
-line-height: 24px;
-
-padding: 0 16px 9px;
-
-color: ${({theme}) => theme.pallet.greyColor4};
-`
-const RecommendedItemsCardPrice = styled.h4`
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 22px;
-
-    padding: 0 16px;
-
-    color: ${({theme}) => theme.pallet.blackColor};
-
-`
-const RecommendedItemsCardImage = styled.img`
-    
-`
-const RecommendedItemsCardImageDiv = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    margin: 10px 0 14px;
-    padding: 1rem 1.5rem;
-`
-const RecommendedItemsCard = styled.div`
-    background: ${({theme}) => theme.pallet.whiteColor};
-
-    border: 1px solid #E0E0E0;
-    border-radius: 6px;
-`
 const RecommendedItemsCards = styled.div`
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -160,6 +101,11 @@ const RecommendedItemsHeader = styled.h3`
 `
 const RecommendedItemsSection = styled.div`
     margin-top: 30px;
+    overflow-x: scroll;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 `
 
 export default RecommendedItems

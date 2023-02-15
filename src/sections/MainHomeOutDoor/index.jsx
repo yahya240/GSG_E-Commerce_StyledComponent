@@ -1,10 +1,19 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { CustomButton } from '../../components'
+import { CustomButton, HomeOutDoorItem } from '../../components'
 
 import homeBg from '../../assets/images/image-92.png'
 import rasmImage from '../../assets/images/rasm.png'
+import chair1 from '../../assets/images/chair1.png'
+import chair2 from '../../assets/images/chair2.png'
+import gra from '../../assets/images/gra.png'
+import mixer from '../../assets/images/mixer.png'
+import blinder from '../../assets/images/blinder.png'
+import appliance from '../../assets/images/appliance.png'
+import tree from '../../assets/images/tree.png'
+
+
 
 const MainHomeOutDoor = () => {
   return (
@@ -21,96 +30,46 @@ const MainHomeOutDoor = () => {
             </MainHomeOutDoorLeft>
 
             <MainHomeOutDoorRight>
-
-                <MainHomeOutDoorRightItem>
-                    <MainHomeOutDoorRightItemText>
-                        <MainHomeOutDoorRightItemTextHeader>Soft chairs</MainHomeOutDoorRightItemTextHeader>
-                        <MainHomeOutDoorRightItemTextPharagraph>From USD 19</MainHomeOutDoorRightItemTextPharagraph>
-                    </MainHomeOutDoorRightItemText>
-
-                    <MainHomeOutDoorRightItemImageDiv>
-                        <MainHomeOutDoorRightItemImage src={rasmImage} />
-                    </MainHomeOutDoorRightItemImageDiv>
-                </MainHomeOutDoorRightItem>
-                
-
-                <MainHomeOutDoorRightItem>
-                    <MainHomeOutDoorRightItemText>
-                        <MainHomeOutDoorRightItemTextHeader>Soft chairs</MainHomeOutDoorRightItemTextHeader>
-                        <MainHomeOutDoorRightItemTextPharagraph>From USD 19</MainHomeOutDoorRightItemTextPharagraph>
-                    </MainHomeOutDoorRightItemText>
-
-                    <MainHomeOutDoorRightItemImageDiv>
-                        <MainHomeOutDoorRightItemImage src={rasmImage} />
-                    </MainHomeOutDoorRightItemImageDiv>
-                </MainHomeOutDoorRightItem>
-
-                <MainHomeOutDoorRightItem>
-                    <MainHomeOutDoorRightItemText>
-                        <MainHomeOutDoorRightItemTextHeader>Soft chairs</MainHomeOutDoorRightItemTextHeader>
-                        <MainHomeOutDoorRightItemTextPharagraph>From USD 19</MainHomeOutDoorRightItemTextPharagraph>
-                    </MainHomeOutDoorRightItemText>
-
-                    <MainHomeOutDoorRightItemImageDiv>
-                        <MainHomeOutDoorRightItemImage src={rasmImage} />
-                    </MainHomeOutDoorRightItemImageDiv>
-                </MainHomeOutDoorRightItem>
-
-                <MainHomeOutDoorRightItem>
-                    <MainHomeOutDoorRightItemText>
-                        <MainHomeOutDoorRightItemTextHeader>Soft chairs</MainHomeOutDoorRightItemTextHeader>
-                        <MainHomeOutDoorRightItemTextPharagraph>From USD 19</MainHomeOutDoorRightItemTextPharagraph>
-                    </MainHomeOutDoorRightItemText>
-
-                    <MainHomeOutDoorRightItemImageDiv>
-                        <MainHomeOutDoorRightItemImage src={rasmImage} />
-                    </MainHomeOutDoorRightItemImageDiv>
-                </MainHomeOutDoorRightItem>
-
-                <MainHomeOutDoorRightItem>
-                    <MainHomeOutDoorRightItemText>
-                        <MainHomeOutDoorRightItemTextHeader>Soft chairs</MainHomeOutDoorRightItemTextHeader>
-                        <MainHomeOutDoorRightItemTextPharagraph>From USD 19</MainHomeOutDoorRightItemTextPharagraph>
-                    </MainHomeOutDoorRightItemText>
-
-                    <MainHomeOutDoorRightItemImageDiv>
-                        <MainHomeOutDoorRightItemImage src={rasmImage} />
-                    </MainHomeOutDoorRightItemImageDiv>
-                </MainHomeOutDoorRightItem>
-
-                <MainHomeOutDoorRightItem>
-                    <MainHomeOutDoorRightItemText>
-                        <MainHomeOutDoorRightItemTextHeader>Soft chairs</MainHomeOutDoorRightItemTextHeader>
-                        <MainHomeOutDoorRightItemTextPharagraph>From USD 19</MainHomeOutDoorRightItemTextPharagraph>
-                    </MainHomeOutDoorRightItemText>
-
-                    <MainHomeOutDoorRightItemImageDiv>
-                        <MainHomeOutDoorRightItemImage src={rasmImage} />
-                    </MainHomeOutDoorRightItemImageDiv>
-                </MainHomeOutDoorRightItem>
-
-                <MainHomeOutDoorRightItem>
-                    <MainHomeOutDoorRightItemText>
-                        <MainHomeOutDoorRightItemTextHeader>Soft chairs</MainHomeOutDoorRightItemTextHeader>
-                        <MainHomeOutDoorRightItemTextPharagraph>From USD 19</MainHomeOutDoorRightItemTextPharagraph>
-                    </MainHomeOutDoorRightItemText>
-
-                    <MainHomeOutDoorRightItemImageDiv>
-                        <MainHomeOutDoorRightItemImage src={rasmImage} />
-                    </MainHomeOutDoorRightItemImageDiv>
-                </MainHomeOutDoorRightItem>
-
-                <MainHomeOutDoorRightItem>
-                    <MainHomeOutDoorRightItemText>
-                        <MainHomeOutDoorRightItemTextHeader>Soft chairs</MainHomeOutDoorRightItemTextHeader>
-                        <MainHomeOutDoorRightItemTextPharagraph>From USD 19</MainHomeOutDoorRightItemTextPharagraph>
-                    </MainHomeOutDoorRightItemText>
-
-                    <MainHomeOutDoorRightItemImageDiv>
-                        <MainHomeOutDoorRightItemImage src={rasmImage} />
-                    </MainHomeOutDoorRightItemImageDiv>
-                </MainHomeOutDoorRightItem>
-
+                <HomeOutDoorItem 
+                    image={rasmImage}
+                    title='Sofa chair'
+                    text='From USD 19'
+                />
+                <HomeOutDoorItem 
+                    image={chair1}
+                    title='Sofa & chair'
+                    text='From USD 19'
+                />
+                <HomeOutDoorItem 
+                    image={chair2}
+                    title='Kitchen dishes'
+                    text='From USD 19'
+                />
+                <HomeOutDoorItem 
+                    image={gra}
+                    title='Smart watches'
+                    text='From USD 19'
+                />
+                <HomeOutDoorItem 
+                    image={mixer}
+                    title='Kitchen mixer'
+                    text='From USD 19'
+                />
+                <HomeOutDoorItem 
+                    image={blinder}
+                    title='Blenders'
+                    text='From USD 19'
+                />
+                <HomeOutDoorItem 
+                    image={appliance}
+                    title='Home appliance'
+                    text='From USD 19'
+                />
+                <HomeOutDoorItem 
+                    image={tree}
+                    title='Coffee maker'
+                    text='From USD 19'
+                />
             </MainHomeOutDoorRight>
 
         </MainHomeOutDoorContainer>
@@ -118,53 +77,10 @@ const MainHomeOutDoor = () => {
   )
 }
 
-const MainHomeOutDoorRightItemImage = styled.img`
-    
-`
-const MainHomeOutDoorRightItemImageDiv = styled.div`
-    
-`
-const MainHomeOutDoorRightItemTextPharagraph = styled.p`
-    font-weight: 400;
-font-size: 13px;
-line-height: 16px;
-
-margin-top: 9px;
-max-width: 50px;
-
-color: ${({theme}) => theme.pallet.greyColor4};
-`
-const MainHomeOutDoorRightItemTextHeader = styled.h4`
-    font-weight: 400;
-font-size: 16px;
-line-height: 19px;
-
-/* base-color/dark */
-
-color: ${({theme}) => theme.pallet.blackColor};
-`
-const MainHomeOutDoorRightItemText = styled.div`
-    
-`
-const MainHomeOutDoorRightItem = styled.div`
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-    border: 1px solid #E0E0E0;
-`
-
 const MainHomeOutDoorRight = styled.div`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr 1fr;
-
-    overflow: scroll;
-    
-    &::-webkit-scrollbar {
-        display: none;
-    }
 `
 
 
@@ -201,7 +117,6 @@ const MainHomeOutDoorContainer = styled.div`
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 3fr;
-    /* grid-row: auto; */
 `
 
 const MainHomeOutDoorSection = styled.div`
@@ -214,6 +129,12 @@ const MainHomeOutDoorSection = styled.div`
     border-radius: 6px;
 
     margin-top: 20px;
+
+    overflow: scroll;
+    
+    &::-webkit-scrollbar {
+        display: none;
+    }
 `
 
 export default MainHomeOutDoor
