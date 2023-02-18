@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import { ProductImage, CustomButton } from '../'
 
-const CartPaymentItem = ({image,title,text,price}) => {
+const CartPaymentItem = ({id,image,title,text,price,handleRemove}) => {
   return (
     <CartPaymentItemContainer>
         <CartPaymentItemDiv>
@@ -13,7 +13,7 @@ const CartPaymentItem = ({image,title,text,price}) => {
                     <DetailsContentTitle>{title}</DetailsContentTitle>
                     <DetailsContentparagraph>{text}</DetailsContentparagraph>
                     <DetailsContentButtons>
-                        <CustomButton fontColor={({theme}) => theme.pallet.redColor} bgColor={({theme}) => theme.pallet.whiteColor}>Remove</CustomButton>
+                        <CustomButton fontColor={({theme}) => theme.pallet.redColor} bgColor={({theme}) => theme.pallet.whiteColor} onClick={()=>handleRemove(id)}>Remove</CustomButton>
                         <CustomButton fontColor={({theme}) => theme.pallet.blueColor} bgColor={({theme}) => theme.pallet.whiteColor}>Save for later</CustomButton>
                     </DetailsContentButtons>
                 </CartPaymentItemDetailsContent>

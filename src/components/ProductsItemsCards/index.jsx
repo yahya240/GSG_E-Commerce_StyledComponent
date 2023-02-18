@@ -32,6 +32,7 @@ const ProductsItemsCards = ({ grid }) => {
           pastPrice = {item.pastPrice}
           rating = {item.rating}
           details = {item.details}
+          item={item}
         />
         })}
         </ProductsSectionItemsCards>
@@ -63,6 +64,7 @@ const ProductsItemsCards = ({ grid }) => {
           orders = {item.orders}
           shipping = {item.shipping}
           description = {item.description}
+          item={item}
         />
         })}
       </ProductsSectionItemsCards2>
