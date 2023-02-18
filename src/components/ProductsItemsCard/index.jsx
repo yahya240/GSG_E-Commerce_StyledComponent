@@ -1,12 +1,27 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { useProductContext } from '../../contexts/productContext'
+
 import heartIcon from '../../assets/images/likeCard.png'
 import starIcon from '../../assets/images/fillstar.png'
 import greyStarIcon from '../../assets/images/star.png'
 
 
-const ProductsItemsCard = ({currentPrice, pastPrice, rating, details, image}) => {
+const ProductsItemsCard = ({currentPrice, pastPrice, rating, details, image, item}) => {
+    const {addToCart,state} = useProductContext();
+
+    const handleAddProduct = ()=>{
+        addToCart(item)
+        // state.products?.map((product)=>{
+        //     if(product.id == item.id){
+        //         return removeFromCart(item.id)
+        //     }
+        //     return addToCart(item)
+        // })
+        // console.log(item.id);
+        console.log(state.products);
+    }
   return (
     <ProductsSectionItemsCard>
 
@@ -18,8 +33,8 @@ const ProductsItemsCard = ({currentPrice, pastPrice, rating, details, image}) =>
 
         <ProductsSectionItemsCardContentInfo>
             <ProductsSectionItemsCardContentInfoPrice>
-                <ProductsSectionItemsCardContentInfoPriceCurrent>{currentPrice}</ProductsSectionItemsCardContentInfoPriceCurrent>
-                <ProductsSectionItemsCardContentInfoPricePast>{pastPrice}</ProductsSectionItemsCardContentInfoPricePast>
+                <ProductsSectionItemsCardContentInfoPriceCurrent>${currentPrice}</ProductsSectionItemsCardContentInfoPriceCurrent>
+                <ProductsSectionItemsCardContentInfoPricePast>${pastPrice}</ProductsSectionItemsCardContentInfoPricePast>
             </ProductsSectionItemsCardContentInfoPrice>
             <ProductsSectionItemsCardContentInfoStars>
                 <ProductsSectionItemsCardContentInfoStarsIcons>
@@ -35,7 +50,7 @@ const ProductsItemsCard = ({currentPrice, pastPrice, rating, details, image}) =>
         </ProductsSectionItemsCardContentInfo>
 
         <ProductsSectionItemsCardContentHeard>
-            <ProductsSectionItemsCardContentHeardIcon src={heartIcon} />
+            <ProductsSectionItemsCardContentHeardIcon src={heartIcon} onClick={handleAddProduct} />
         </ProductsSectionItemsCardContentHeard>
 
     </ProductsSectionItemsCardContent>
@@ -61,7 +76,7 @@ const ProductsSectionItemsCardContentHeardIcon = styled.img`
     
 `
 const ProductsSectionItemsCardContentHeard = styled.div`
-    
+    cursor: pointer;
 `
 const ProductsSectionItemsCardContentInfoDetails = styled.p`
     font-weight: 400;

@@ -1,9 +1,10 @@
 import { ThemeProvider } from 'styled-components';
 import {Routes, Route} from 'react-router-dom';
 
-// global styles
+// global Providers
 import { lightTheme } from './global/themes';
 import GlobalStyle from './global/globalStyle';
+import ProductProvider from './contexts/productContext';
 
 // routes 
 import MainRoutes from './routes';
@@ -18,9 +19,11 @@ function App() {
       <ThemeProvider theme={lightTheme}>
           <GlobalStyle />
           <ErrorBoundary>
-            <Routes>
-              <Route path="/*" element={<MainRoutes />} />
-            </Routes>
+            <ProductProvider>
+              <Routes>
+                <Route path="/*" element={<MainRoutes />} />
+              </Routes>
+            </ProductProvider>
         </ErrorBoundary>
       </ThemeProvider>
     </>

@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const CustomButton = ({children,fontColor,bgColor,width,height,fontSize}) => {
+const CustomButton = ({children,fontColor,bgColor,width,height,fontSize,onClick}) => {
   return (
-    <CustomButtonContainer fontColor={fontColor} fontSize={fontSize} bgColor={bgColor} height={height} width={width}>{children}</CustomButtonContainer>
+    <CustomButtonContainer onClick={onClick} fontColor={fontColor} fontSize={fontSize} bgColor={bgColor} height={height} width={width}>{children}</CustomButtonContainer>
   )
 }
 
@@ -25,8 +25,6 @@ const CustomButtonContainer = styled.button`
   box-shadow: 0px 1px 2px rgba(56, 56, 56, 0.08);
   border-radius: 6px;
   padding: 0.5rem 0.8rem;
-  /* margin: 0 3px; */
-
     
   display: flex;
   align-items: center;

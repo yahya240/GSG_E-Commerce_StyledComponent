@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { CartCoupon, CustomButton, CreditCardImage, CartPaymentItem } from '../../components'
-import { cartData  } from '../../Mock/cartData'
+import { useProductContext } from '../../contexts/productContext'
 
 import arrowIcon from '../../assets/images/Vector5.png'
 import paymentIcon from '../../assets/images/payment.png'
@@ -11,16 +11,26 @@ import expressIcon from '../../assets/images/express.png'
 import amercanIcon from '../../assets/images/amercan.png'
 
 
+
 const CartPayment = () => {
+    const {state, removeFromCart, clearCart} = useProductContext();
+
+    const handleRemove = (id)=>{
+        removeFromCart(id)
+        console.log(state);
+    }
+
   return (
     <CartPaymentSection>
         <CartPaymentItems>
-            {cartData.map((item)=>{
-                return <CartPaymentItem 
+            {state.products.map((item)=>{
+                return <CartPaymentItem
+                    id={item.id}
                     image={item.image}
-                    title={item.title}
-                    text={item.text}
-                    price={item.price}
+                    title={item.details}
+                    text={item.description}
+                    price={item.currentPrice}
+                    handleRemove={handleRemove}
                 />
             })}
             <CartPaymentItemsButtons>
@@ -28,10 +38,9 @@ const CartPayment = () => {
                     <ArrowIconImage src={arrowIcon} />
                         Back to shop
                     </CustomButton>
-                <CustomButton fontColor={({theme}) => theme.pallet.blueColor} bgColor={({theme}) => theme.pallet.whiteColor}>Remove all</CustomButton>
+                <CustomButton fontColor={({theme}) => theme.pallet.blueColor} bgColor={({theme}) => theme.pallet.whiteColor} onClick={()=>clearCart()}>Remove all</CustomButton>
             </CartPaymentItemsButtons>
         </CartPaymentItems>
-
         <CartPaymentMethods>
             <CartCoupon />
             <CartPaymentMethodsCheckout>
