@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import axios from 'axios'
+import * as yup from 'yup';
 // import styled from 'styled-components';
 // import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 
 import eyeIcon from '../../assets/images/eye-icon.png';
 import facebookIcon from '../../assets/images/facebook-icon.png';
@@ -9,8 +12,19 @@ import googleIcon from '../../assets/images/google-icon.png';
 import { FormPage, FormContainer, FormFooter, FormInputContainer, FormSectionFooter,
      FormButton, FormChechbox, HorizentalLine, Button, FormHeader, FormSection } from '../../components';
 
-const Login = () => {
+import { useAuthContext } from '../../contexts/authContext';
 
+let schema = yup.object().shape({
+    // username: yup.string().max(16),
+    email: yup.string().email().required(),
+    password: yup.string().min(3).matches(/[a-z]/, "password must contain SMALL letters" ).required(),
+    // password2: yup.string().oneOf([yup.ref('password'), null]),
+    remember: yup.boolean().oneOf([true], "You must check the remember me ")
+}); 
+
+const Login = () => {
+    const {setIsAuthorized} = useAuthContext()
+    const navigate = useNavigate();
     const [formData,setFormData] = useState({username:'',password:'',remember:false});
 
     const handleChange = (e)=>{
@@ -24,7 +38,25 @@ const Login = () => {
 
     const handleSubmit = (e) =>{
         e.preventDefault();
-        console.log(formData);
+        // console.log(formData);
+        schema.validate({email:formData.username,password:formData.password})
+        .then( async (data) => {
+            console.log(data);
+            try {
+                const res = await axios.post('https://react-tt-api.onrender.com/api/users/login',data)
+                if(res){
+                    console.log(res.data)
+                    setIsAuthorized(true)
+                    localStorage.setItem('token',res.data.token)
+                    navigate('/')
+                }
+            } catch (error) {
+                console.log(error.response.data.message);
+            }
+        })
+        .catch((err) => {
+            console.log(err);
+        })
     }
 
 
@@ -34,7 +66,7 @@ const Login = () => {
         <FormSection>
             <FormContainer>
                 <FormHeader>Sign in</FormHeader>
-                <FormInputContainer name='username' value={formData.username} handleChange={handleChange} inputLable='Username' inputPlaceHolder='Email or phone' />
+                <FormInputContainer name='username' type='email' value={formData.username} handleChange={handleChange} inputLable='Username' inputPlaceHolder='Email or phone' />
                 <FormInputContainer 
                     name='password'
                     type='password'

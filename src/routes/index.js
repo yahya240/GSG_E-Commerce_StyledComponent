@@ -2,6 +2,7 @@ import React from 'react'
 import {Routes, Route} from 'react-router-dom';
 
 import { Register, Login, Main, SingleProduct, Products, Cart } from '../pages';
+import { ProtectedRoute } from '../components';
 import NotFound from '../Errors/NotFound'
 
 const MainRoutes = () => {
@@ -12,7 +13,7 @@ const MainRoutes = () => {
         <Route path='register' element={<Register />} />
         <Route path='products' element={<Products />} />
         <Route path='singleProduct' element={<SingleProduct />} />
-        <Route path='cart' element={<Cart />} />
+        <Route path='cart' element={<ProtectedRoute><Cart /></ProtectedRoute>} />
         <Route path='*' element={<NotFound />} />
     </Routes>
   )

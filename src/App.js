@@ -5,7 +5,7 @@ import {Routes, Route} from 'react-router-dom';
 import { lightTheme } from './global/themes';
 import GlobalStyle from './global/globalStyle';
 import ProductProvider from './contexts/productContext';
-
+import AuthProvider from './contexts/authContext';
 // routes 
 import MainRoutes from './routes';
 
@@ -20,9 +20,11 @@ function App() {
           <GlobalStyle />
           <ErrorBoundary>
             <ProductProvider>
-              <Routes>
-                <Route path="/*" element={<MainRoutes />} />
-              </Routes>
+              <AuthProvider>
+                <Routes>
+                  <Route path="/*" element={<MainRoutes />} />
+                </Routes>
+              </AuthProvider>
             </ProductProvider>
         </ErrorBoundary>
       </ThemeProvider>
