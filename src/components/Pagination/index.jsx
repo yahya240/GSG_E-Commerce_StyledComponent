@@ -35,7 +35,6 @@ const Pagination = ({productsPerPage, totalProducts, currentPage, setCurrentPage
         <ProductsSectionPaginationOption value={30}>Show 30</ProductsSectionPaginationOption>
     </ProductsSectionPaginationSelect>
     <ProductsSectionPaginationPages>
-      {console.log(typeof(currentPage))}
         <ProductsSectionPaginationPageBack currentPage={currentPage} onClick={handlePageBack} >{'<'}</ProductsSectionPaginationPageBack>
         {pageNumbers.map((number)=>{
           return <ProductsSectionPaginationPage key={number} number={number} currentPage={currentPage} onClick={()=>setCurrentPage(number)}>{number}</ProductsSectionPaginationPage>

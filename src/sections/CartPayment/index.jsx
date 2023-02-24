@@ -17,7 +17,6 @@ const CartPayment = () => {
 
     const handleRemove = (id)=>{
         removeFromCart(id)
-        console.log(state);
     }
 
   return (
@@ -25,6 +24,7 @@ const CartPayment = () => {
         <CartPaymentItems>
             {state.products.map((item)=>{
                 return <CartPaymentItem
+                    key={item.id}
                     id={item.id}
                     image={item.image}
                     title={item.details}
