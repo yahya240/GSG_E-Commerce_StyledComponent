@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body{
-        background-color: steelblue;
+        background-color: ${({theme}) => theme.pallet.bgPrimary};
         font-family: 'Inter', sans-serif;
     }
 
