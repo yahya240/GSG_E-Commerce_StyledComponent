@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useNavigate } from 'react-router'
+import { useAuthContext } from '../../contexts/authContext'
 
 import BannerImage from '../../assets/images/Banner.png'
 import avatarImage from '../../assets/images/avatar.png'
@@ -7,6 +9,14 @@ import avatarImage from '../../assets/images/avatar.png'
 import { CustomButton } from '../../components'
 
 const MainHero = () => {
+    const navigate = useNavigate()
+    const {setIsAuthorized} = useAuthContext();
+    const name = localStorage.getItem('name')
+
+    const handleLogout = ()=>{
+        setIsAuthorized(false)
+        localStorage.clear();
+    }
   return (
     <MainHeroSection>
         <MainHeroSectionContainer>
@@ -38,13 +48,17 @@ const MainHero = () => {
                             <MainHeroUserCardHeaderAvatar src={avatarImage} />
                         </MainHeroUserCardHeaderAvatarDiv>
                         <MainHeroUserCardHeaderContentDiv>
-                        <MainHeroUserCardHeaderContent>Hi, user </MainHeroUserCardHeaderContent>
+                        <MainHeroUserCardHeaderContent>Hi, {name? name: 'guest'} </MainHeroUserCardHeaderContent>
                         <MainHeroUserCardHeaderContent>let’s get stated</MainHeroUserCardHeaderContent>
                         </MainHeroUserCardHeaderContentDiv>
                     </MainHeroUserCardHeader>
                     <MainHeroUserCardHeaderButtons>
                         <CustomButton height={'30px'} width={'100%'} bgColor={({theme}) => theme.pallet.blueColor} fontColor={({theme}) => theme.pallet.whiteColor}>Join now</CustomButton>
-                        <CustomButton height={'30px'} width={'100%'} bgColor={({theme}) => theme.pallet.whiteColor} fontColor={({theme}) => theme.pallet.blueColor}>Log in</CustomButton>
+                        {name? 
+                        <CustomButton height={'30px'} width={'100%'} bgColor={({theme}) => theme.pallet.whiteColor} fontColor={({theme}) => theme.pallet.blueColor} onClick={handleLogout} >Log out</CustomButton>
+                        :
+                        <CustomButton height={'30px'} width={'100%'} bgColor={({theme}) => theme.pallet.whiteColor} fontColor={({theme}) => theme.pallet.blueColor} onClick={()=>navigate('/login')}>Log in</CustomButton>
+                        }
                     </MainHeroUserCardHeaderButtons>
                 </MainHeroUserCard>
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios'
-import * as yup from 'yup';
+// import * as yup from 'yup';
 // import styled from 'styled-components';
 // import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router';
@@ -13,14 +13,14 @@ import { FormPage, FormContainer, FormFooter, FormInputContainer, FormSectionFoo
      FormButton, FormChechbox, HorizentalLine, Button, FormHeader, FormSection } from '../../components';
 
 import { useAuthContext } from '../../contexts/authContext';
-
-let schema = yup.object().shape({
-    // username: yup.string().max(16),
-    email: yup.string().email().required(),
-    password: yup.string().min(3).matches(/[a-z]/, "password must contain SMALL letters" ).required(),
-    // password2: yup.string().oneOf([yup.ref('password'), null]),
-    remember: yup.boolean().oneOf([true], "You must check the remember me ")
-}); 
+import schema from '../../validation/schema';
+// let schema = yup.object().shape({
+//     username: yup.string().max(16),
+//     email: yup.string().email().required(),
+//     password: yup.string().min(3).matches(/[a-z]/, "password must contain SMALL letters" ).required(),
+//     password2: yup.string().oneOf([yup.ref('password'), null]),
+//     remember: yup.boolean().oneOf([true], "You must check the remember me ")
+// }); 
 
 const Login = () => {
     const {setIsAuthorized} = useAuthContext()
@@ -48,6 +48,7 @@ const Login = () => {
                     console.log(res.data)
                     setIsAuthorized(true)
                     localStorage.setItem('token',res.data.token)
+                    localStorage.setItem('name',res.data.name)
                     navigate('/')
                 }
             } catch (error) {

@@ -1,27 +1,53 @@
 import React,{useState} from 'react'
 import styled from 'styled-components'
+import axios from 'axios';
+import schema from '../../validation/schema';
+import { useAuthContext } from '../../contexts/authContext';
+import { useNavigate } from 'react-router';
 
 import { 
   FormPage, FormContainer, FormFooter, FormInputContainer, FormSectionFooter,
   FormButton, FormChechbox, FormHeader, FormSection 
 } from '../../components';
 
+
 const Register = () => {
-  
+  const {setIsAuthorized} = useAuthContext();
+  const navigate = useNavigate()
   const [formData,setFormData] = useState({name:'',surname:'',email:'',password:'',password2:'',terms:false});
 
   const handleChange = (e)=>{
-      const name = e.target.name;
-      const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
-      // console.log(name,value);
+    const name = e.target.name;
+    const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
+    // console.log(name,value);
 
-      setFormData({...formData,[name]:value})
-      // console.log(formData);
+    setFormData({...formData,[name]:value})
+    // console.log(formData);
   }
 
   const handleSubmit = (e) =>{
-      e.preventDefault();
-      console.log(formData);
+    e.preventDefault();
+    // console.log(formData);
+
+    schema.validate({name:formData.name,surname:formData.surname,email:formData.email,password:formData.password,password2:formData.password2,terms:formData.terms})
+    .then(async (res)=> {
+      // console.log(res)
+      const data = {name:`${res.name} ${res.surname}`,email:res.email,password:res.password}
+      // console.log('data', data);
+      try {
+        const response = await axios.post('https://react-tt-api.onrender.com/api/users/signup',data)
+        if(response){
+          console.log(response)
+          setIsAuthorized(true)
+          localStorage.setItem('token',response.data.token)
+          localStorage.setItem('name',response.data.name)
+          navigate('/')
+        }
+      } catch (error) {
+        console.log(error)
+      }
+    })
+    .catch((err)=> console.log(err))
   }
 
 
@@ -74,7 +100,7 @@ return (
               <FormButton type='submit' onClick={handleSubmit}>Register now</FormButton>
               <FormChechbox name='terms' text='I agree with ' text2='Terms and Conditions' checked={formData.terms} handleChange={handleChange} />
               <RegisterHorizentalLine />
-              <FormSectionFooter path='/' text='Already have an accaunt?' text2='Logn in' />
+              <FormSectionFooter path='/login' text='Already have an accaunt?' text2='Logn in' />
 
           </FormContainer>
       </FormSection>
