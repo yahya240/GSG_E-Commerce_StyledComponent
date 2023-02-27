@@ -1,9 +1,17 @@
-import React from 'react'
+import React,{lazy} from 'react'
 import {Routes, Route} from 'react-router-dom';
 
-import { Register, Login, Main, SingleProduct, Products, Cart } from '../pages';
+// import { Register, Login, Main, SingleProduct, Products, Cart } from '../pages';
+// import NotFound from '../Errors/NotFound'
+
 import { ProtectedRoute } from '../components';
-import NotFound from '../Errors/NotFound'
+const Register = lazy(()=> import('../pages/Register'));
+const Login = lazy(()=> import('../pages/Login'));
+const Main = lazy(()=> import('../pages/Main'));
+const SingleProduct = lazy(()=> import('../pages/SingleProduct'));
+const Products = lazy(()=> import('../pages/Products'));
+const Cart = lazy(()=> import('../pages/Cart'));
+const NotFound = lazy(()=> import('../Errors/NotFound'));
 
 const MainRoutes = () => {
   return (
